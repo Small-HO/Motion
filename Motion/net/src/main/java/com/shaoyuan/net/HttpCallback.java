@@ -29,5 +29,5 @@ public abstract class HttpCallback<Result> implements ICallback {
             return (Class<?>) type;
         }
     }
-    abstract void onSuccess(Result result);
+    public abstract void onSuccess(Result result);
 }
