@@ -19,6 +19,13 @@ ext {
             espressoVersion:    "3.+",
             layoutVersion:      "1.+",
             junitVersion:       "4.+",
+
+            butterknifeVersion: "8.+",
+
+            volleyVersion           : "1.+",
+            okHttpVersion           : "+",
+            xutilsVersion           : "3.+",
+            retrofitVersion         : "2.+",
     ]
 
     //  依赖
@@ -47,10 +54,6 @@ ext {
                     xutils:         "org.xutils:xutils:${depVersion.xutilsVersion}",
 
                     gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
-                    rxjava:         "com.squareup.retrofit2:adapter-rxjava2:${depVersion.retrofitVersion}",
-                    rxandroid:      "io.reactivex.rxjava2:rxandroid:${depVersion.retrofitVersion}",
-                    retrofit:       "com.squareup.retrofit2:retrofit:${depVersion.retrofitVersion}",
-                    scalars:        "com.squareup.retrofit2:converter-scalars:${depVersion.retrofitVersion}",
             ],
     ]
 }

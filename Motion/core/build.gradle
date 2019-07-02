@@ -26,10 +26,8 @@ android {
 }
 
 dependencies {
-    def dependencies = rootProject.ext.deps
-
-    implementation dependencies.internet.gson
-    implementation dependencies.internet.xutils
-    implementation dependencies.internet.volley
-    implementation dependencies.internet.okhttp
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':model')
+    implementation project(':api')
+    implementation project(':net')
 }

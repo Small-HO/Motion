@@ -23,6 +23,9 @@ android {
 dependencies {
     def dependencies = rootProject.ext.deps
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':model')
+    implementation project(':core')
+
     implementation dependencies.utils.layouts
     implementation dependencies.support.appcompat
     testImplementation dependencies.utils.junit
