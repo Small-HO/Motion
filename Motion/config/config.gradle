@@ -1,0 +1,56 @@
+/** ------------------------------------统一依赖管理 ---------------------------------- */
+ext {
+    //  App 相关版本控制
+    versions = [
+            versionCode:        2,                      //  版本号
+            versionName:        "2.0",                  //  版本名称
+            applicationId:      "com.shaoyuan.motion",  //  项目ID
+            minSdkVersion:      18,                     //  支持SDK的最低版本
+            targetSdkVersion:   28,                     //  支持SDK的目标版本
+            compileSdkVersion:  28,                     //  编译的SDK版本
+            buildToolsVersion:  "29.0.0"                //  编译的Tools版本
+    ]
+
+    //  依赖相关配置  (注：depVersion头数字与targetSdkVersion版本一致)
+    depVersion = [
+            supportLibraryVersion:  "28.+",
+
+            runnerVersion:      "1.+",
+            espressoVersion:    "3.+",
+            layoutVersion:      "1.+",
+            junitVersion:       "4.+",
+    ]
+
+    //  依赖
+    deps = [
+            //  常用引用
+            support:    [
+                    support:        "com.android.support:support-v4:${depVersion.supportLibraryVersion}",
+                    appcompat:      "com.android.support:appcompat-v7:${depVersion.supportLibraryVersion}",
+                    design:         "com.android.support:design:${depVersion.supportLibraryVersion}",
+                    recyclerVier:   "com.android.support:recyclerview-v7:${depVersion.supportLibraryVersion}",
+            ],
+            //  工具引用
+            utils:  [
+                    runner:         "com.android.support.test:runner:${depVersion.runnerVersion}",
+                    espresso:       "com.android.support.test.espresso:espresso-core:${depVersion.espressoVersion}",
+                    junit:          "junit:junit:${depVersion.junitVersion}",
+                    multidex:       "com.android.support:multidex:${depVersion.multidexVersion}",
+                    layouts:        "com.android.support.constraint:constraint-layout:${depVersion.layoutVersion}",
+                    butterknife:    "com.jakewharton:butterknife:${depVersion.butterknifeVersion}",
+                    compiler:       "com.jakewharton:butterknife-compiler:${depVersion.butterknifeVersion}"
+            ],
+            //  网络引用
+            internet: [
+                    volley:         "com.android.volley:volley:${depVersion.volleyVersion}",
+                    okhttp:         "com.zhy:okhttputils:${depVersion.okHttpVersion}",
+                    xutils:         "org.xutils:xutils:${depVersion.xutilsVersion}",
+
+                    gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
+                    rxjava:         "com.squareup.retrofit2:adapter-rxjava2:${depVersion.retrofitVersion}",
+                    rxandroid:      "io.reactivex.rxjava2:rxandroid:${depVersion.retrofitVersion}",
+                    retrofit:       "com.squareup.retrofit2:retrofit:${depVersion.retrofitVersion}",
+                    scalars:        "com.squareup.retrofit2:converter-scalars:${depVersion.retrofitVersion}",
+            ],
+    ]
+}
