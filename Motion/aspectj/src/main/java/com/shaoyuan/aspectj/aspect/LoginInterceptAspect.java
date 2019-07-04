@@ -3,8 +3,8 @@ package com.shaoyuan.aspectj.aspect;
 import android.content.Context;
 import android.util.Log;
 
-import com.shaoyuan.aspectj.Interface.ILogin;
-import com.shaoyuan.aspectj.Interface.LoginIntercept;
+import com.shaoyuan.aspectj.login.ILogin;
+import com.shaoyuan.aspectj.login.LoginIntercept;
 import com.shaoyuan.aspectj.utils.LoginSDK;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -16,14 +16,14 @@ import org.aspectj.lang.reflect.MethodSignature;
 
 /**
  * Created by small-ho on 2019/7/3 17:04
- * title：注解相关的Aspectj的实现类
+ * title：登录拦截注解相关的Aspectj的实现类
  */
 @Aspect
 public class LoginInterceptAspect {
     private static final String Tag = "LoginInterceptAspect";
 
     /**找到指定注解的切点 */
-    @Pointcut("execution(@com.shaoyuan.aspectj.Interface.LoginIntercept * *(..)))")
+    @Pointcut("execution(@com.shaoyuan.aspectj.login.LoginIntercept * *(..)))")
     public void executeCheckLogin() {}
 
     /** 切面 */

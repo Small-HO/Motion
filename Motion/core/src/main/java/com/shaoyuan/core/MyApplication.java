@@ -2,9 +2,8 @@ package com.shaoyuan.core;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
 
-import com.shaoyuan.aspectj.Interface.ILogin;
+import com.shaoyuan.aspectj.login.ILogin;
 import com.shaoyuan.aspectj.utils.LoginSDK;
 import com.shaoyuan.core.utils.StrictModeHelper;
 import com.shaoyuan.net.HttpHelper;
@@ -37,7 +36,10 @@ public class MyApplication extends Application {
             }
         }
 
-        /** 此处检测用户登录状态 */
+        /**
+         * @param context
+         * @return 返回用户当前登录状态 true登录 false未登录,可通过接口获取用户登录状态
+         */
         @Override
         public boolean isLogin(Context context) {
             return false;

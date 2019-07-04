@@ -3,7 +3,7 @@ package com.shaoyuan.aspectj.utils;
 import android.annotation.SuppressLint;
 import android.content.Context;
 
-import com.shaoyuan.aspectj.Interface.ILogin;
+import com.shaoyuan.aspectj.login.ILogin;
 
 /**
  * Created by small-ho on 2019/7/3 16:58
