@@ -27,6 +27,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':aspectj')
     implementation project(':model')
     implementation project(':api')
     implementation project(':net')

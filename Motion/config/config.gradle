@@ -21,6 +21,7 @@ ext {
             junitVersion:       "4.+",
 
             butterknifeVersion: "8.+",
+            aspectjVersion          : "1.8.13",
 
             volleyVersion           : "1.+",
             okHttpVersion           : "+",
@@ -55,5 +56,9 @@ ext {
 
                     gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
             ],
+            //  aop
+            aop :[
+                    aspectj : "org.aspectj:aspectjrt:${depVersion.aspectjVersion}",
+            ]
     ]
 }
