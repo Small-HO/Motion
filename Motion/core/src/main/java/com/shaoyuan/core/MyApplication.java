@@ -14,6 +14,7 @@ import com.shaoyuan.net.processor.OkHttpProcessor;
  * title：全局初始化
  */
 public class MyApplication extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
