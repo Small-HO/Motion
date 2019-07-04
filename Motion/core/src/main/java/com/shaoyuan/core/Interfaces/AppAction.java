@@ -1,4 +1,4 @@
-package com.shaoyuan.core;
+package com.shaoyuan.core.Interfaces;
 
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.net.HttpCallback;

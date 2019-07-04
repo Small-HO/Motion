@@ -6,6 +6,7 @@ import android.content.Intent;
 
 import com.shaoyuan.aspectj.Interface.ILogin;
 import com.shaoyuan.aspectj.utils.LoginSDK;
+import com.shaoyuan.core.utils.StrictModeHelper;
 import com.shaoyuan.net.HttpHelper;
 import com.shaoyuan.net.processor.OkHttpProcessor;
 
@@ -17,8 +18,11 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        HttpHelper.init(new OkHttpProcessor());             //  网络框架切换初始化
-        LoginSDK.getInstance().init(this,login);    //  用户登录状态初始化
+        HttpHelper.init(new OkHttpProcessor());                 //  网络框架切换初始化
+        LoginSDK.getInstance().init(this,login);        //  用户登录状态初始化
+        StrictModeHelper.setPolicy(BuildConfig.DEBUG);          //  App性能检测 上线必须关闭
+//        Bugly.init(this,"",true);                               //  App异常崩溃检测 上线时集成即可
+//        AppUpdate.init(this);                                   //  App更新检测初始化
     }
 
     private ILogin login = new ILogin() {
