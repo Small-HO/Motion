@@ -1,1 +1,1 @@
-include ':app', ':net', ':core', ':api', ':model'
+include ':app', ':net', ':core', ':api', ':model', ':aspectj'
