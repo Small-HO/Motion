@@ -56,6 +56,11 @@ ext {
 
                     gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
             ],
+            //  bugly
+            bugly:[
+                    crashreport:    "com.tencent.bugly:crashreport_upgrade:latest.release",
+                    nativecrashreport: "com.tencent.bugly:nativecrashreport:latest.release",
+            ],
             //  aop
             aop :[
                     aspectj : "org.aspectj:aspectjrt:${depVersion.aspectjVersion}",
