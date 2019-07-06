@@ -24,7 +24,7 @@ public class MyApplication extends Application {
         HttpHelper.init(new OkHttpProcessor());                          //  网络框架切换初始化
         LoginSDK.getInstance().init(this,login);                 //  用户登录状态初始化
         StrictModeHelper.setPolicy(BuildConfig.DEBUG);                   //  App性能检测 上线必须关闭
-        Bugly.init(this,"a8ea682d0e",false);    //  App异常崩溃采集 上线时集成即可,测试时关闭
+//        Bugly.init(this,"a8ea682d0e",false);    //  App异常崩溃采集 上线时集成即可,测试时关闭
     }
 
     private ILogin login = new ILogin() {
