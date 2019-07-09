@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:background="@color/colorWhite"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+
+    <TextView
+        android:id="@+id/tb_tb_home"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:drawableTop="@mipmap/ic_home"
+        android:drawablePadding="@dimen/dp_5"
+        android:text="@string/tv_tab_home"
+        />
+    <TextView
+        android:id="@+id/tb_tv_data"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:drawableTop="@mipmap/ic_data"
+        android:drawablePadding="@dimen/dp_5"
+        android:text="@string/tv_tab_data"
+        />
+    <TextView
+        android:id="@+id/tb_tv_mine"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:drawableTop="@mipmap/ic_mine"
+        android:drawablePadding="@dimen/dp_5"
+        android:text="@string/tv_tab_mine"
+        />
+
+</LinearLayout>
