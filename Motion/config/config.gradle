@@ -27,6 +27,9 @@ ext {
             okHttpVersion           : "+",
             xutilsVersion           : "3.+",
             retrofitVersion         : "2.+",
+
+            bannerVersion           : "1.4.9",
+            glideVersion            : "3.7.0",
     ]
 
     //  依赖
@@ -55,6 +58,11 @@ ext {
                     xutils:         "org.xutils:xutils:${depVersion.xutilsVersion}",
 
                     gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
+            ],
+            //  其他引用
+            other:  [
+                    banner      : "com.youth.banner:banner:${depVersion.bannerVersion}",                        //  轮播
+                    glide       : "com.github.bumptech.glide:glide:${depVersion.glideVersion}",                 //  图片加载框架
             ],
             //  bugly
             bugly:[

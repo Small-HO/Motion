@@ -8,12 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.shaoyuan.motion.R;
+import com.youth.banner.Banner;
+
+import butterknife.BindView;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MineFragment extends Fragment {
-
 
     public MineFragment() {
         // Required empty public constructor
@@ -24,7 +26,9 @@ public class MineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mine, container, false);
+        View view = inflater.inflate(R.layout.fragment_mine, container, false);
+
+        return view;
     }
 
 }

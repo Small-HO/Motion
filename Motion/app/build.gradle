@@ -39,4 +39,6 @@ dependencies {
 
     implementation dependencies.utils.compiler
     implementation dependencies.utils.butterknife
+    implementation dependencies.other.banner
+    implementation dependencies.other.glide
 }
