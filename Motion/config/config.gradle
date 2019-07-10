@@ -39,7 +39,7 @@ ext {
                     support:        "com.android.support:support-v4:${depVersion.supportLibraryVersion}",
                     appcompat:      "com.android.support:appcompat-v7:${depVersion.supportLibraryVersion}",
                     design:         "com.android.support:design:${depVersion.supportLibraryVersion}",
-                    recyclerVier:   "com.android.support:recyclerview-v7:${depVersion.supportLibraryVersion}",
+                    recyclerView:   "com.android.support:recyclerview-v7:${depVersion.supportLibraryVersion}",
             ],
             //  工具引用
             utils:  [

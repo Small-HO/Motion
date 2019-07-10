@@ -9,5 +9,8 @@
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/ui_tab_title"/>
     <include layout="@layout/ui_banner_layout"/>
+    <include layout="@layout/ui_home_module"/>
+    <include layout="@layout/ui_home_module_demand"/>
+    <include layout="@layout/ui_home_module_stadium"/>
 
 </LinearLayout>

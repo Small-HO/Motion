@@ -7,6 +7,21 @@
 
     <string name="tv_tab_home_title">帮邦</string>
 
+    <string name="tv_home_module_recipe">运动处方</string>
+    <string name="tv_home_module_plan">运动计划</string>
+    <string name="tv_home_module_medical">健康医疗</string>
+    <string name="tv_home_module_record">健康档案</string>
+
+    <string name="tv_home_module_site">场地预约</string>
+    <string name="tv_home_module_equipment">器材预约</string>
+    <string name="tv_home_module_coach">教练预约</string>
+    <string name="tv_home_module_curriculum">课程预约</string>
+    <string name="tv_home_module_consult">健康咨询</string>
+    <string name="tv_home_module_stadium">推荐场馆</string>
+
+
+    <string name="tv_data_module">数据</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".ui.DataFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="测试二" />
+    <include layout="@layout/ui_tab_title"/>
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/dp_10"
+        android:src="@mipmap/ic_data_banner"/>
+
+    <include layout="@layout/ui_data_module"/>
+
+</LinearLayout>

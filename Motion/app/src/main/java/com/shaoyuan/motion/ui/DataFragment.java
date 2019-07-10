@@ -6,25 +6,33 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.shaoyuan.motion.BaseFragment;
 import com.shaoyuan.motion.R;
+
+import butterknife.BindView;
 
 /**
  * A simple {@link Fragment} subclass.
+ *
  */
-public class DataFragment extends Fragment {
+public class DataFragment extends BaseFragment {
 
+    @BindView(R.id.tv_title)TextView mTitle;
 
     public DataFragment() {
         // Required empty public constructor
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.fragment_data;
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_data, container, false);
+    public void initFragmentData(Bundle savedInstanceState) {
+
     }
 
 }

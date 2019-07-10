@@ -2,7 +2,6 @@ package com.shaoyuan.motion;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 

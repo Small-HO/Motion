@@ -32,7 +32,8 @@ dependencies {
 
     implementation dependencies.utils.layouts
     implementation dependencies.support.appcompat
-    implementation 'com.android.support:support-v4:28.0.0'
+    implementation dependencies.support.recyclerView
+
     testImplementation dependencies.utils.junit
     androidTestImplementation dependencies.utils.runner
     androidTestImplementation dependencies.utils.espresso
@@ -41,4 +42,5 @@ dependencies {
     implementation dependencies.utils.butterknife
     implementation dependencies.other.banner
     implementation dependencies.other.glide
+
 }
