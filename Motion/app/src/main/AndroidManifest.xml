@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.RecipeActivity"></activity>
+        <activity android:name=".ui.activity.PlanActivity"></activity>
+        <activity android:name=".ui.activity.RecipeActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppStartTheme">

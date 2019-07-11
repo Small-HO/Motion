@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ui_no_data"/>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/ic_dalog_bg"
+        >
+
+        <ProgressBar
+            android:id="@+id/pg_view"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_centerInParent="true"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/ic_dalog_loding"
+            android:indeterminateOnly="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_loding"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/pg_view"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/colorLoding"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -16,7 +16,14 @@ public interface HomeInterface {
 
         void initBannerView(List<BannerModel> info);
 
-        void toRecipePage();
+        void toRecipePage();    //  运动处方
+        void toPlanPage();      //  运动计划
+        void toMedicalPage();   //  健康医疗
+        void toRecordPage();    //  健康档案
+        void toSitePage();      //  场地预约
+        void toEquipmentPage(); //  器材预约
+        void toCoachPage();     //  教练预约
+        void toCurriculumPage();//  课程预约
     }
     interface presenter {
         List<BannerModel> initBannerData();

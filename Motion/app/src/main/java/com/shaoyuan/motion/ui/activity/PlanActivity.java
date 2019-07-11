@@ -8,18 +8,18 @@ import com.shaoyuan.motion.R;
 
 import butterknife.BindView;
 
-public class RecipeActivity extends BaseActivity {
+public class PlanActivity extends BaseActivity {
 
-    @BindView(R.id.tv_back_title)TextView mTitle;
+    @BindView(R.id.tv_back_title) TextView mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mTitle.setText(R.string.tv_home_module_recipe);
+        mTitle.setText(R.string.tv_home_module_plan);
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_recipe;
+        return R.layout.activity_plan;
     }
 }

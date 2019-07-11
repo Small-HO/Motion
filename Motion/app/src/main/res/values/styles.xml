@@ -9,4 +9,27 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
     </style>
+
+    <!--    TODO:  自定义dialog背景全透明无边框theme    -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>           <!--无边框-->
+        <item name="android:windowIsFloating">true</item>       <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>   <!--半透明-->
+        <item name="android:windowNoTitle">true</item>          <!--无标题-->
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>   <!--模糊-->
+        <item name="android:windowCloseOnTouchOutside">false</item> <!-- 点外边是否可以取消 -->
+    </style>
+
+    <style name="alert_dialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.4</item>
+    </style>
 </resources>

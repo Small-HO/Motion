@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 
 import com.shaoyuan.motion.utils.ActivityManager;
+import com.shaoyuan.motion.utils.LoadDialog;
 
 import butterknife.ButterKnife;
 
@@ -15,6 +16,7 @@ import butterknife.ButterKnife;
  */
 @SuppressLint("Registered")
 public abstract class BaseActivity extends AppCompatActivity {
+    LoadDialog loadDialog;
     private static long lastClickTime;
 
     @Override
@@ -22,7 +24,18 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         ButterKnife.bind(this);
+        loadDialog = new LoadDialog(this);
         ActivityManager.getInstance().addActivity(this);   //  添加到栈中
+    }
+
+    protected void startload() {
+        loadDialog.setCanceledOnTouchOutside(false);
+        loadDialog.setCancelable(false);
+        loadDialog.show();
+    }
+
+    protected void stopload() {
+        loadDialog.dismiss();
     }
 
     /** 处理activity跳转两次问题 */

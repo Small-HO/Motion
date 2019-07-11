@@ -11,5 +11,8 @@
     <color name="colorLineGreen">#20C7BF</color>
     <color name="colorMineText">#ff666666</color>
 
+    <color name="colorLoding">#f0f0f0</color>
+    <color name="colorDalogBlack">#80000000</color>
+
 
 </resources>
