@@ -15,6 +15,8 @@ public interface HomeInterface {
         Context getContext();
 
         void initBannerView(List<BannerModel> info);
+
+        void toRecipePage();
     }
     interface presenter {
         List<BannerModel> initBannerData();

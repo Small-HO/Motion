@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
-import com.shaoyuan.motion.ui.DataFragment;
-import com.shaoyuan.motion.ui.HomeFragment;
-import com.shaoyuan.motion.ui.MineFragment;
+import com.shaoyuan.motion.ui.fragment.DataFragment;
+import com.shaoyuan.motion.ui.fragment.HomeFragment;
+import com.shaoyuan.motion.ui.fragment.MineFragment;
 
 import java.util.ArrayList;
 import java.util.List;

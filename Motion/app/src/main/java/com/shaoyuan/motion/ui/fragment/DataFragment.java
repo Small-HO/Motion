@@ -1,11 +1,8 @@
-package com.shaoyuan.motion.ui;
+package com.shaoyuan.motion.ui.fragment;
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.shaoyuan.motion.BaseFragment;
@@ -32,7 +29,7 @@ public class DataFragment extends BaseFragment {
 
     @Override
     public void initFragmentData(Bundle savedInstanceState) {
-
+        mTitle.setText(R.string.tv_tab_data_title);
     }
 
 }

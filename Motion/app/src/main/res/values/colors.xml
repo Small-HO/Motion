@@ -9,6 +9,7 @@
     <color name="colorBlack">#000000</color>
 
     <color name="colorLineGreen">#20C7BF</color>
+    <color name="colorMineText">#ff666666</color>
 
 
 </resources>

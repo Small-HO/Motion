@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center" android:background="@color/colorWhite"
-    android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_60"
+    android:fitsSystemWindows="true">
 
     <TextView
         android:id="@+id/tv_title"

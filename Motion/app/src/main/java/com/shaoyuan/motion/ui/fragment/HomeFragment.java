@@ -1,4 +1,4 @@
-package com.shaoyuan.motion.ui;
+package com.shaoyuan.motion.ui.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -46,7 +46,7 @@ public class HomeFragment extends BaseFragment implements HomeInterface.view {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_module_recipe:     //  运动处方
-                showToast("运动处方");
+
                 break;
             case R.id.tv_module_plan:       //  运动计划
                 showToast("运动计划");
@@ -88,6 +88,11 @@ public class HomeFragment extends BaseFragment implements HomeInterface.view {
                 .isAutoPlay(true)                       //  设置是否自动轮播
                 .setIndicatorGravity(BannerConfig.CENTER);  //  设置指示器的位置，左中右
         mBanner.start();
+    }
+
+    @Override
+    public void toRecipePage() {
+
     }
 
     @Override

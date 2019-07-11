@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="280dp"
+    >
+
+    <ImageView
+        android:id="@+id/iv_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_mine_header_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:background="@mipmap/ic_mine_user_header">
+
+        <TextView
+            android:id="@+id/tv_module_order"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:drawableTop="@mipmap/ic_mine_header_order"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/tv_mine_header_order"
+            />
+        <TextView
+            android:id="@+id/tv_module_cookies"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:drawableTop="@mipmap/ic_mine_header_cookies"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/tv_mine_header_cookies"
+            />
+        <TextView
+            android:id="@+id/tv_module_resume"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:drawableTop="@mipmap/ic_mine_header_resume"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/tv_mine_header_resume"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_mine_header"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小怪兽"
+        android:layout_above="@+id/iv_header"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/dp_20"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>

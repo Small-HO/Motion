@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
@@ -9,11 +9,179 @@
         android:text="@string/tv_data_module"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"
-        android:paddingLeft="@dimen/dp_10"
-        android:background="@color/colorWhite"
+        android:padding="@dimen/dp_10"
         />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_module_line_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/v_module_intake"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_toStartOf="@+id/v_module_line_1"
+            android:background="@drawable/ic_adta_module_bg"/>
+
+        <TextView
+            android:id="@+id/v_module_exercise"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_toEndOf="@+id/v_module_line_1"
+            android:background="@drawable/ic_adta_module_bg"/>
+
+        <ImageView
+            android:id="@+id/iv_intake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/v_module_intake"
+            android:layout_alignTop="@+id/v_module_intake"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@mipmap/ic_data_intake"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_data_module_more"
+            android:layout_alignTop="@+id/iv_intake"
+            android:layout_alignEnd="@+id/v_module_intake"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/tv_data_module_intake"
+            android:layout_alignStart="@+id/v_module_intake"
+            android:layout_alignBottom="@+id/v_module_intake"
+            />
+
+        <ImageView
+            android:id="@+id/iv_exercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_data_exercise"
+            android:layout_alignStart="@+id/v_module_exercise"
+            android:layout_alignTop="@+id/v_module_exercise"
+            android:layout_margin="@dimen/dp_10"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_data_module_more"
+            android:layout_alignTop="@+id/iv_exercise"
+            android:layout_alignEnd="@+id/v_module_exercise"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/tv_data_module_exercise"
+            android:layout_alignStart="@+id/v_module_exercise"
+            android:layout_alignBottom="@+id/v_module_exercise"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/v_module_line_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorBlack"
+            />
+
+        <TextView
+            android:id="@+id/v_module_stamina"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_toStartOf="@+id/v_module_line_2"
+            android:background="@drawable/ic_adta_module_bg"/>
+
+        <TextView
+            android:id="@+id/v_module_constitution"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_toEndOf="@+id/v_module_line_2"
+            android:background="@drawable/ic_adta_module_bg"/>
+
+        <ImageView
+            android:id="@+id/iv_stamina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_data_stamina"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_alignStart="@+id/v_module_stamina"
+            android:layout_alignTop="@+id/v_module_stamina"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_data_module_more"
+            android:layout_alignTop="@+id/iv_stamina"
+            android:layout_alignEnd="@+id/v_module_stamina"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/tv_data_module_stamina"
+            android:layout_alignStart="@+id/v_module_stamina"
+            android:layout_alignBottom="@+id/v_module_stamina"
+            />
+
+        <ImageView
+            android:id="@+id/iv_constitution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_data_constitution"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_alignStart="@+id/v_module_constitution"
+            android:layout_alignTop="@+id/v_module_constitution"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:src="@drawable/ic_data_module_more"
+            android:layout_alignTop="@+id/iv_constitution"
+            android:layout_alignEnd="@+id/v_module_constitution"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:text="@string/tv_data_module_constitution"
+            android:layout_alignStart="@+id/v_module_constitution"
+            android:layout_alignBottom="@+id/v_module_constitution"
+            />
+
+    </RelativeLayout>
 
 
-
-</RelativeLayout>
+</merge>
