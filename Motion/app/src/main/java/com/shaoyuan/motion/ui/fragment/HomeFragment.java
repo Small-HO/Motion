@@ -11,8 +11,14 @@ import com.shaoyuan.core.persenter.HomePresenter;
 import com.shaoyuan.model.BannerModel;
 import com.shaoyuan.motion.BaseFragment;
 import com.shaoyuan.motion.R;
+import com.shaoyuan.motion.ui.activity.CoachActivity;
+import com.shaoyuan.motion.ui.activity.CurriculumActivity;
+import com.shaoyuan.motion.ui.activity.EquipmentActivity;
+import com.shaoyuan.motion.ui.activity.MedicalActivity;
 import com.shaoyuan.motion.ui.activity.PlanActivity;
 import com.shaoyuan.motion.ui.activity.RecipeActivity;
+import com.shaoyuan.motion.ui.activity.RecordActivity;
+import com.shaoyuan.motion.ui.activity.SiteActivity;
 import com.shaoyuan.motion.utils.MyImageLoader;
 import com.shaoyuan.motion.utils.MyScalePageTransformer;
 import com.youth.banner.Banner;
@@ -94,44 +100,52 @@ public class HomeFragment extends BaseFragment implements HomeInterface.view {
         mBanner.start();
     }
 
+    /** 跳转运动处方 */
     @Override
     public void toRecipePage() {
         startActivity(new Intent(getContext(), RecipeActivity.class));
     }
 
+    /** 跳转运动计划 */
     @Override
     public void toPlanPage() {
         startActivity(new Intent(getContext(), PlanActivity.class));
     }
 
+    /** 跳转健康医疗 */
     @Override
     public void toMedicalPage() {
-
+        startActivity(new Intent(getContext(), MedicalActivity.class));
     }
 
+    /** 跳转健康档案 */
     @Override
     public void toRecordPage() {
-
+        startActivity(new Intent(getContext(), RecordActivity.class));
     }
 
+    /** 跳转场地预约 */
     @Override
     public void toSitePage() {
-
+        startActivity(new Intent(getContext(), SiteActivity.class));
     }
 
+    /** 跳转器材预约 */
     @Override
     public void toEquipmentPage() {
-
+        startActivity(new Intent(getContext(), EquipmentActivity.class));
     }
 
+    /** 跳转教练预约 */
     @Override
     public void toCoachPage() {
-
+        startActivity(new Intent(getContext(), CoachActivity.class));
     }
 
+    /** 跳转课程预约 */
     @Override
     public void toCurriculumPage() {
-
+        startActivity(new Intent(getContext(), CurriculumActivity.class));
     }
 
     @Override

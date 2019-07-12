@@ -18,7 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.PlanActivity"></activity>
+        <activity android:name=".ui.activity.CurriculumActivity"></activity>
+        <activity android:name=".ui.activity.CoachActivity" />
+        <activity android:name=".ui.activity.EquipmentActivity" />
+        <activity android:name=".ui.activity.SiteActivity" />
+        <activity android:name=".ui.activity.RecordActivity" />
+        <activity android:name=".ui.activity.MedicalActivity" />
+        <activity android:name=".ui.activity.PlanActivity" />
         <activity android:name=".ui.activity.RecipeActivity" />
         <activity
             android:name=".MainActivity"
