@@ -13,6 +13,20 @@
     <string name="tv_home_module_medical">健康医疗</string>
     <string name="tv_home_module_record">健康档案</string>
 
+    <string name="tv_recipe_grade">处方等级</string>
+    <string name="tv_sports_days">运动天数</string>
+    <string name="tv_mUpgrade_recipe">升级处方</string>
+    <string name="tv_core">核心</string>
+    <string name="tv_heart_lung">心肺</string>
+    <string name="tv_upper_limb">上肢</string>
+    <string name="tv_lower_limbs">下肢</string>
+    <string name="tv_toughness">柔韧性</string>
+    <string name="tv_bmi">BMI</string>
+    <string name="tv_hrrest">安静心率</string>
+    <string name="tv_hrr">储备心率</string>
+    <string name="tv_mhr">最大心率</string>
+
+
     <string name="tv_home_module_site">场地预约</string>
     <string name="tv_home_module_equipment">器材预约</string>
     <string name="tv_home_module_coach">教练预约</string>

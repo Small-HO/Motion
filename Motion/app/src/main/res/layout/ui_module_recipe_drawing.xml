@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:id="@+id/tv_recipe_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/colorGradeRecipe"
+        />
+
+    <TextView
+        android:id="@+id/tv_grade_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.5"
+        android:layout_margin="@dimen/dp_5"
+        android:textSize="@dimen/sp_40"
+        android:textColor="@color/colorGradeData"
+        />
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="@dimen/dp_3"
+        android:background="@color/colorBlack"
+        />
+
+    <TextView
+        android:id="@+id/tv_upgrade_recipe"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorUpdateRecipe"
+        android:gravity="center"
+        android:layout_margin="@dimen/dp_10"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_15"
+        android:background="@drawable/ic_module_recipe_green"
+        />
+
+</merge>

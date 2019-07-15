@@ -3,9 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/activitybg"
     tools:context=".ui.activity.RecipeActivity">
 
-    <include layout="@layout/ui_title_back"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.shaoyuan.core.view.CircleOrangeView
+                android:id="@+id/ui_circle_view"
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/dp_400"
+                android:layout_height="@dimen/dp_400" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_140"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <include layout="@layout/ui_module_recipe_drawing" />
+
+                <include layout="@layout/ui_module_recipe_degree"/>
+
+                <include layout="@layout/ui_module_recipe_info"/>
+
+                <TextView
+                    android:id="@+id/tv_to_motion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_45"
+                    android:text="去运动"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/dp_20"
+                    android:background="@drawable/ic_recipe_motion_button"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:text="运动中出现胸闷气短、恶心、胸痛或者生活中有感冒、饮酒、熬夜是时，停止运动"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/ui_title_back"/>
 
 </RelativeLayout>

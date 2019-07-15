@@ -30,7 +30,7 @@
             android:layout_height="@dimen/dp_100"
             android:layout_margin="@dimen/dp_5"
             android:layout_toStartOf="@+id/v_module_line_1"
-            android:background="@drawable/ic_adta_module_bg"/>
+            android:background="@drawable/ic_data_module_bg"/>
 
         <TextView
             android:id="@+id/v_module_exercise"
@@ -38,7 +38,7 @@
             android:layout_height="@dimen/dp_100"
             android:layout_margin="@dimen/dp_5"
             android:layout_toEndOf="@+id/v_module_line_1"
-            android:background="@drawable/ic_adta_module_bg"/>
+            android:background="@drawable/ic_data_module_bg"/>
 
         <ImageView
             android:id="@+id/iv_intake"
@@ -115,7 +115,7 @@
             android:layout_height="@dimen/dp_100"
             android:layout_margin="@dimen/dp_5"
             android:layout_toStartOf="@+id/v_module_line_2"
-            android:background="@drawable/ic_adta_module_bg"/>
+            android:background="@drawable/ic_data_module_bg"/>
 
         <TextView
             android:id="@+id/v_module_constitution"
@@ -123,7 +123,7 @@
             android:layout_height="@dimen/dp_100"
             android:layout_margin="@dimen/dp_5"
             android:layout_toEndOf="@+id/v_module_line_2"
-            android:background="@drawable/ic_adta_module_bg"/>
+            android:background="@drawable/ic_data_module_bg"/>
 
         <ImageView
             android:id="@+id/iv_stamina"

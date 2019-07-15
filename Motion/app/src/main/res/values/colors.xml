@@ -14,5 +14,9 @@
     <color name="colorLoding">#f0f0f0</color>
     <color name="colorDalogBlack">#80000000</color>
 
+    <color name="colorGradeData">#ff333333</color>
+    <color name="colorGradeRecipe">#ff999999</color>
+    <color name="colorUpdateRecipe">#ff21c7bf</color>
+
 
 </resources>

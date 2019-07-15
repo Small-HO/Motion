@@ -11,11 +11,15 @@ import butterknife.BindView;
 public class PlanActivity extends BaseActivity {
 
     @BindView(R.id.tv_back_title) TextView mTitle;
+    @BindView(R.id.tv_recipe_grade)TextView mGrade;
+    @BindView(R.id.tv_upgrade_recipe)TextView mUpgrade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mTitle.setText(R.string.tv_home_module_plan);
+        mGrade.setText(R.string.tv_sports_days);
+        mUpgrade.setText(R.string.tv_mUpgrade_recipe);
     }
 
     @Override
