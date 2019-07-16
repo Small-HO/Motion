@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/dp_10"
+    android:id="@+id/order_list_item"
+    android:layout_marginTop="@dimen/dp_2"
+    android:layout_width="match_parent" android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/iv_order_image"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/colorLineGreen"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/iv_order_image"
+        android:text="团操室"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginStart="@dimen/dp_10"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/colorGradeData"
+        />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="0"
+        android:textColor="@color/colorGradeData"
+        android:textSize="@dimen/sp_20"
+        />
+
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:text="场地"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/colorGradeData"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_toEndOf="@+id/iv_order_image"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-07-15 09.13.39"
+        android:textColor="@color/colorGradeRecipe"
+        android:textSize="@dimen/sp_14"
+        android:layout_toEndOf="@+id/iv_order_image"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:id="@+id/tv_order_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未付款"
+        android:textColor="@color/colorOrderStart"
+        android:textSize="@dimen/sp_14"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>

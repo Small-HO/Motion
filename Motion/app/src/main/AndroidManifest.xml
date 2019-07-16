@@ -18,14 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.CurriculumActivity"/>
-        <activity android:name=".ui.activity.CoachActivity" />
-        <activity android:name=".ui.activity.EquipmentActivity" />
-        <activity android:name=".ui.activity.SiteActivity" />
-        <activity android:name=".ui.activity.RecordActivity" />
-        <activity android:name=".ui.activity.MedicalActivity" />
-        <activity android:name=".ui.activity.PlanActivity" />
-        <activity android:name=".ui.activity.RecipeActivity" android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".ui.activity.UserActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppStartTheme">
@@ -35,6 +28,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activity.OrderActivity" />
+        <activity android:name=".ui.activity.CurriculumActivity" />
+        <activity android:name=".ui.activity.CoachActivity" />
+        <activity android:name=".ui.activity.EquipmentActivity" />
+        <activity android:name=".ui.activity.SiteActivity" />
+        <activity android:name=".ui.activity.RecordActivity" />
+        <activity android:name=".ui.activity.MedicalActivity" />
+        <activity android:name=".ui.activity.PlanActivity" />
+        <activity
+            android:name=".ui.activity.RecipeActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
     </application>
 
 </manifest>

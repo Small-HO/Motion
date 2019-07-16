@@ -18,5 +18,7 @@
     <color name="colorGradeRecipe">#ff999999</color>
     <color name="colorUpdateRecipe">#ff21c7bf</color>
 
+    <color name="colorOrderStart">#fffa6060</color>
+
 
 </resources>

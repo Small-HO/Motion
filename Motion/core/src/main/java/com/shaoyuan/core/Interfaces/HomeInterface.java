@@ -2,7 +2,7 @@ package com.shaoyuan.core.Interfaces;
 
 import android.content.Context;
 
-import com.shaoyuan.model.BannerModel;
+import com.shaoyuan.model.dataModel.BannerModel;
 
 import java.util.List;
 

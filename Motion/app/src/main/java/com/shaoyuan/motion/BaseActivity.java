@@ -1,6 +1,7 @@
 package com.shaoyuan.motion;
 
 import android.annotation.SuppressLint;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
@@ -10,7 +11,6 @@ import com.shaoyuan.motion.utils.ActivityManager;
 import com.shaoyuan.motion.utils.LoadDialog;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by small-ho on 2019/7/6 16:08

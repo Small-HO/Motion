@@ -5,7 +5,7 @@ import android.content.Context;
 import com.shaoyuan.core.Interfaces.HomeInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;
-import com.shaoyuan.model.BannerModel;
+import com.shaoyuan.model.dataModel.BannerModel;
 
 import java.util.ArrayList;
 import java.util.List;

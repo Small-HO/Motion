@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.shaoyuan.core.Interfaces.HomeInterface;
 import com.shaoyuan.core.persenter.HomePresenter;
-import com.shaoyuan.model.BannerModel;
+import com.shaoyuan.model.dataModel.BannerModel;
 import com.shaoyuan.motion.BaseFragment;
 import com.shaoyuan.motion.R;
 import com.shaoyuan.motion.ui.activity.CoachActivity;

@@ -6,9 +6,13 @@ import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.model.SmsCode;
+import com.shaoyuan.model.dataInfo.OrderInfo;
+import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.net.HttpCallback;
 import com.shaoyuan.net.HttpHelper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -57,5 +61,22 @@ public class AppActionImpl implements AppAction {
                 callback.onSuccess(smsCode.toString());
             }
         });
+    }
+
+    @Override
+    public void orderInfo(Map<String, Object> params, HttpCallback<OrderModel> callback) {
+        OrderModel model = new OrderModel();
+        /** 模拟数据 */
+        List<OrderInfo> list = new ArrayList<>();
+        OrderInfo info = new OrderInfo();
+        info.setTemstype("场地");
+        info.setSetmealprice("0.01");
+        info.setPaystate(false);
+        info.setCreattime("2019-07-15 09:13:57");
+        info.setMechname("团操室");
+        list.add(info);
+        model.setOrderInfos(list);
+
+        callback.onSuccess(model);
     }
 }

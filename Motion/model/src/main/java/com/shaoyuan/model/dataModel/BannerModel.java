@@ -1,4 +1,4 @@
-package com.shaoyuan.model;
+package com.shaoyuan.model.dataModel;
 
 /**
  * Created by small-ho on 2019/7/10 10:38

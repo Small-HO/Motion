@@ -46,6 +46,8 @@
     <string name="tv_mine_header_cookies">浏览记录</string>
     <string name="tv_mine_header_resume">个人资料</string>
 
+    <string name="tv_mine_order_list">订单列表</string>
+
     <string name="tv_mine_module_secure">修改密码</string>
     <string name="tv_mine_module_share">分享客户端</string>
     <string name="tv_mine_module_faq">常见问题</string>
