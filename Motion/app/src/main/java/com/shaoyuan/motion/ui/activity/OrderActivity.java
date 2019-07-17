@@ -71,12 +71,6 @@ public class OrderActivity extends BaseActivity implements OrderInterface.view {
         mOrderList.setAdapter(new OrderAdapter(this,model.getOrderInfos()));
     }
 
-    /** 订单列表所需参数 */
-    @Override
-    public Map<String, Object> orderParams() {
-        return null;
-    }
-
     @Override
     public void showLog(String log) {
         LogUtils.i(Tag,log);

@@ -1,5 +1,6 @@
 package com.shaoyuan.core.action;
 
+import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
@@ -21,4 +22,6 @@ public interface AppAction {
 
     //  用户基本信息
     void userInfo(Map<String,Object> params, HttpCallback<UserInfoModel> callback);
+    //  保存用户信息
+    void userInfoSave(Map<String,Object> params, HttpCallback<BaseModel> callback);
 }

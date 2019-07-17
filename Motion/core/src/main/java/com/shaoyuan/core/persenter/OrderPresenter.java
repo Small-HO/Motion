@@ -6,6 +6,8 @@ import com.shaoyuan.core.actionImpl.AppActionImpl;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.net.HttpCallback;
 
+import java.util.Map;
+
 /**
  * Created by small-ho on 2019/7/16 9:08
  * title：订单列表核心逻辑
@@ -21,7 +23,7 @@ public class OrderPresenter implements OrderInterface.presenter {
 
     @Override
     public void initOrderDatas() {
-        action.orderInfo(view.orderParams(), new HttpCallback<OrderModel>() {
+        action.orderInfo(orderParams(), new HttpCallback<OrderModel>() {
             @Override
             public void onSuccess(OrderModel model) {
                 view.showLog("订单列表请求状态：" + model.getOrderInfos().toString());
@@ -33,5 +35,9 @@ public class OrderPresenter implements OrderInterface.presenter {
 
             }
         });
+    }
+
+    private Map<String, Object> orderParams() {
+        return null;
     }
 }

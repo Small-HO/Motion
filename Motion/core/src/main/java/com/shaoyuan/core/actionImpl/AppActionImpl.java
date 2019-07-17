@@ -5,6 +5,7 @@ import android.content.Context;
 import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
+import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataInfo.OrderInfo;
 import com.shaoyuan.model.dataModel.OrderModel;
@@ -90,6 +91,14 @@ public class AppActionImpl implements AppAction {
         model.setBirthdate("2019");
         model.setHeight("1.8");
         model.setWeight("145");
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void userInfoSave(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
 
         callback.onSuccess(model);
     }
