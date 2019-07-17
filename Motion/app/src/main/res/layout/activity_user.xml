@@ -190,7 +190,7 @@
         android:id="@+id/tv_confirm"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
-        android:text="确定"
+        android:text="@string/tv_button_ok"
         android:gravity="center"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/sp_16"

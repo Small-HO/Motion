@@ -10,7 +10,10 @@ public interface MineInterface {
     interface view {
         Context getContext();
 
+        void toHeaderPage();
         void toOrderPage();
         void toUserPage();
+        void toSecurePage();
+        void toQuestions();
     }
 }

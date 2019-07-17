@@ -55,6 +55,7 @@
     <string name="tv_mine_module_feedback">意见反馈</string>
     <string name="tv_mine_module_exit">退出登录</string>
 
+    <string name="tv_mine_user_header">头像</string>
     <string name="tv_mine_user_info">基本信息</string>
     <string name="tv_mine_user_name">昵称</string>
     <string name="tv_mine_user_sex">性别</string>
@@ -68,9 +69,18 @@
     <string name="tv_mine_user_weight_hint">请输入您的体重</string>
     <string name="tv_mine_user_name_hint">请输入您的昵称</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     <string name="tv_loding">加载中...</string>
+
+    <string name="tv_button_ok">确定</string>
+
+    <!-- 修改密码页面 -->
+    <string name="tv_mine_old_password">请输入旧密码</string>
+    <string name="tv_mine_new_password">请输入新密码</string>
+    <string name="tv_mine_password">请再次输入密码</string>
+    <string name="tv_mine_updata_more">更多修改方式  ></string>
 </resources>

@@ -8,7 +8,10 @@ import android.view.View;
 import com.shaoyuan.core.Interfaces.MineInterface;
 import com.shaoyuan.motion.BaseFragment;
 import com.shaoyuan.motion.R;
+import com.shaoyuan.motion.ui.activity.HeaderActivity;
 import com.shaoyuan.motion.ui.activity.OrderActivity;
+import com.shaoyuan.motion.ui.activity.QuestionsActivity;
+import com.shaoyuan.motion.ui.activity.SecureActivity;
 import com.shaoyuan.motion.ui.activity.UserActivity;
 
 import butterknife.OnClick;
@@ -34,6 +37,7 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_header:            //  头像
+                toHeaderPage();
                 break;
             case R.id.tv_module_order:      //  订单
                 toOrderPage();
@@ -45,13 +49,13 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
                 toUserPage();
                 break;
             case R.id.rl_module_secure:     //  修改密码
-
+                toSecurePage();
                 break;
             case R.id.rl_module_share:      //  分享客户端
 
                 break;
             case R.id.rl_module_faq:        //  常见问题
-
+                toQuestions();
                 break;
             case R.id.rl_module_set:        //  设置中心
 
@@ -71,6 +75,11 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
     }
 
     @Override
+    public void toHeaderPage() {
+        startActivity(new Intent(getContext(), HeaderActivity.class));
+    }
+
+    @Override
     public void toOrderPage() {
         startActivity(new Intent(getContext(), OrderActivity.class));
     }
@@ -78,5 +87,15 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
     @Override
     public void toUserPage() {
         startActivity(new Intent(getContext(), UserActivity.class));
+    }
+
+    @Override
+    public void toSecurePage() {
+        startActivity(new Intent(getContext(), SecureActivity.class));
+    }
+
+    @Override
+    public void toQuestions() {
+        startActivity(new Intent(getContext(), QuestionsActivity.class));
     }
 }

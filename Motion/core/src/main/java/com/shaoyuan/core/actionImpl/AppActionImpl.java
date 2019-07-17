@@ -102,4 +102,12 @@ public class AppActionImpl implements AppAction {
 
         callback.onSuccess(model);
     }
+
+    @Override
+    public void updatePas(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
+
+        callback.onSuccess(model);
+    }
 }

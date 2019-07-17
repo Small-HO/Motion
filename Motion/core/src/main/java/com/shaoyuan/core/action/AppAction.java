@@ -24,4 +24,7 @@ public interface AppAction {
     void userInfo(Map<String,Object> params, HttpCallback<UserInfoModel> callback);
     //  保存用户信息
     void userInfoSave(Map<String,Object> params, HttpCallback<BaseModel> callback);
+
+    //  修改密码
+    void updatePas(Map<String,Object> params,HttpCallback<BaseModel> callback);
 }

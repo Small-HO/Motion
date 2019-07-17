@@ -22,5 +22,7 @@
 
     <color name="colorOrderStart">#fffa6060</color>
 
+    <color name="color_button_press">#dddddd</color>    <!-- 按钮按下颜色 -->
+
 
 </resources>
