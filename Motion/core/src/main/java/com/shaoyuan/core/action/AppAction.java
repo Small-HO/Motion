@@ -2,6 +2,7 @@ package com.shaoyuan.core.action;
 
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.net.HttpCallback;
 
 import java.util.Map;
@@ -15,5 +16,9 @@ public interface AppAction {
     //  发送验证码
     void sendSmsCode(Map<String,Object> params, HttpCallback<SmsCode> callback);
 
+    //  订单列表
     void orderInfo(Map<String,Object> params, HttpCallback<OrderModel> callback);
+
+    //  用户基本信息
+    void userInfo(Map<String,Object> params, HttpCallback<UserInfoModel> callback);
 }

@@ -8,4 +8,198 @@
 
     <include layout="@layout/ui_title_back"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_2"
+        >
+
+        <TextView
+            android:id="@+id/tv_name_view"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_mine_user_name"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGradeData"
+            android:layout_marginStart="@dimen/dp_20"
+            />
+
+        <EditText
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:hint="@string/tv_mine_user_name_hint"
+            android:layout_toEndOf="@+id/tv_name_view"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp_2"
+        >
+
+        <TextView
+            android:id="@+id/tv_sex_view"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_mine_user_sex"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGradeData"
+            android:layout_marginStart="@dimen/dp_20"
+            />
+        
+        <RadioGroup
+            android:id="@+id/rg_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_sex_view"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:checked="true"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/colorSex"
+                android:button="@drawable/radio_button"
+                android:text="@string/tv_mine_user_man"/>
+
+            <RadioButton
+                android:id="@+id/rb_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_5"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/colorSex"
+                android:button="@drawable/radio_button"
+                android:text="@string/tv_mine_user_woman"
+                />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_2"
+        >
+
+        <TextView
+            android:id="@+id/tv_birthda_view"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_mine_user_birthday"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGradeData"
+            android:layout_marginStart="@dimen/dp_20"
+            />
+
+        <TextView
+            android:id="@+id/tv_birthda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:hint="@string/tv_mine_user_birthday_hint"
+            android:layout_toEndOf="@+id/tv_birthda_view"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_2"
+        >
+
+        <TextView
+            android:id="@+id/tv_stature_view"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_mine_user_stature"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGradeData"
+            android:layout_marginStart="@dimen/dp_20"
+            />
+
+        <EditText
+            android:id="@+id/tv_stature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:hint="@string/tv_mine_user_stature_hint"
+            android:layout_toEndOf="@+id/tv_stature_view"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_2"
+        >
+
+        <TextView
+            android:id="@+id/tv_weight_view"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_mine_user_weight"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorGradeData"
+            android:layout_marginStart="@dimen/dp_20"
+            />
+
+        <EditText
+            android:id="@+id/tv_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/sp_14"
+            android:layout_centerVertical="true"
+            android:hint="@string/tv_mine_user_weight_hint"
+            android:layout_toEndOf="@+id/tv_weight_view"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:text="确定"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_100"
+        android:background="@drawable/ic_recipe_motion_button"
+
+        />
+
 </LinearLayout>

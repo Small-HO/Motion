@@ -8,6 +8,7 @@ import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataInfo.OrderInfo;
 import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.net.HttpCallback;
 import com.shaoyuan.net.HttpHelper;
 
@@ -65,8 +66,8 @@ public class AppActionImpl implements AppAction {
 
     @Override
     public void orderInfo(Map<String, Object> params, HttpCallback<OrderModel> callback) {
+        //  模拟数据
         OrderModel model = new OrderModel();
-        /** 模拟数据 */
         List<OrderInfo> list = new ArrayList<>();
         OrderInfo info = new OrderInfo();
         info.setTemstype("场地");
@@ -76,6 +77,19 @@ public class AppActionImpl implements AppAction {
         info.setMechname("团操室");
         list.add(info);
         model.setOrderInfos(list);
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void userInfo(Map<String, Object> params, HttpCallback<UserInfoModel> callback) {
+        //  模拟数据
+        UserInfoModel model = new UserInfoModel();
+        model.setNickname("小油瓶");
+        model.setSex("女");
+        model.setBirthdate("2019");
+        model.setHeight("1.8");
+        model.setWeight("145");
 
         callback.onSuccess(model);
     }
