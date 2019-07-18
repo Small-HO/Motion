@@ -12,6 +12,7 @@ import com.shaoyuan.motion.ui.activity.HeaderActivity;
 import com.shaoyuan.motion.ui.activity.OrderActivity;
 import com.shaoyuan.motion.ui.activity.QuestionsActivity;
 import com.shaoyuan.motion.ui.activity.SecureActivity;
+import com.shaoyuan.motion.ui.activity.SuggestionActivity;
 import com.shaoyuan.motion.ui.activity.UserActivity;
 
 import butterknife.OnClick;
@@ -61,7 +62,7 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
 
                 break;
             case R.id.rl_module_feedback:   //  意见反馈
-
+                toSuggestion();
                 break;
             case R.id.rl_module_exit:       //  退出登录
 
@@ -97,5 +98,10 @@ public class MineFragment extends BaseFragment implements MineInterface.view {
     @Override
     public void toQuestions() {
         startActivity(new Intent(getContext(), QuestionsActivity.class));
+    }
+
+    @Override
+    public void toSuggestion() {
+        startActivity(new Intent(getContext(), SuggestionActivity.class));
     }
 }

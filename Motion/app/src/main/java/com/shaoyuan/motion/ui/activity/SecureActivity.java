@@ -1,9 +1,11 @@
 package com.shaoyuan.motion.ui.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.shaoyuan.core.Interfaces.SecureInterface;
 import com.shaoyuan.core.persenter.SecurePresenter;
@@ -20,6 +22,7 @@ public class SecureActivity extends BaseActivity implements SecureInterface.view
     @BindView(R.id.et_old_pas)EditText mOldPas;
     @BindView(R.id.et_new_pas)EditText mNewPas;
     @BindView(R.id.et_new)EditText mRetype;
+    @BindView(R.id.tv_title)TextView mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,7 @@ public class SecureActivity extends BaseActivity implements SecureInterface.view
                 presenter.updatePas();
                 break;
             case R.id.tv_updata_more:
-
+                toSmsCheck();
                 break;
         }
     }
@@ -54,7 +57,13 @@ public class SecureActivity extends BaseActivity implements SecureInterface.view
 
     @Override
     public void initView() {
+        mTitle.setText(R.string.tv_mine_module_secure);
         presenter = new SecurePresenter(this);
+    }
+
+    @Override
+    public void toSmsCheck() {
+        startActivity(new Intent(this,SmsCheckActivity.class));
     }
 
     @Override

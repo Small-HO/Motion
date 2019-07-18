@@ -23,6 +23,8 @@
     <color name="colorOrderStart">#fffa6060</color>
 
     <color name="color_button_press">#dddddd</color>    <!-- 按钮按下颜色 -->
+    <color name="colorQuestion">#ffafafaf</color>       <!-- 常见问题文本-->
+    <color name="colorEditText">#F5F5F5</color>         <!-- 输入框颜色-->
 
 
 </resources>

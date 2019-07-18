@@ -12,6 +12,8 @@ public interface SecureInterface {
 
         void initView();
 
+        void toSmsCheck();
+
         String getOldPwd();
         String getNewPwd();
         String getRetype();

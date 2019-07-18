@@ -41,6 +41,11 @@
     <string name="tv_data_module_stamina">体能</string>
     <string name="tv_data_module_constitution">体质</string>
 
+    <string name="tv_data_trend_reporter">报告分析</string>
+
+
+
+
 
     <string name="tv_mine_header_order">订单</string>
     <string name="tv_mine_header_cookies">浏览记录</string>
@@ -49,6 +54,7 @@
     <string name="tv_mine_order_list">订单列表</string>
 
     <string name="tv_mine_module_secure">修改密码</string>
+    <string name="tv_mine_module_smscheck">短信验证</string>
     <string name="tv_mine_module_share">分享客户端</string>
     <string name="tv_mine_module_faq">常见问题</string>
     <string name="tv_mine_module_set">设置中心</string>
@@ -79,8 +85,14 @@
     <string name="tv_button_ok">确定</string>
 
     <!-- 修改密码页面 -->
+    <string name="tv_mine_phone">请输入手机号</string>
+    <string name="tv_mine_code">请输入验证码</string>
+    <string name="tv_mine_get_code">获取验证码</string>
     <string name="tv_mine_old_password">请输入旧密码</string>
     <string name="tv_mine_new_password">请输入新密码</string>
     <string name="tv_mine_password">请再次输入密码</string>
     <string name="tv_mine_updata_more">更多修改方式  ></string>
+
+    <!-- 意见反馈 -->
+    <string name="tv_mine_suggestion">请输入您的意见和建议，工作人员会在第一时间进行评估处理。感谢您的热心反馈！</string>
 </resources>

@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.QuestionsActivity"></activity>
+        <activity android:name=".ui.activity.IntakeActivity"></activity>
+        <activity android:name=".ui.activity.SmsCheckActivity" />
+        <activity android:name=".ui.activity.SuggestionActivity" />
+        <activity android:name=".ui.activity.QuestionsActivity" />
         <activity android:name=".ui.activity.SecureActivity" />
         <activity android:name=".ui.activity.HeaderActivity" />
         <activity android:name=".ui.activity.UserActivity" />

@@ -8,7 +8,9 @@ import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataInfo.OrderInfo;
+import com.shaoyuan.model.dataInfo.QuestionInfo;
 import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.QuestionModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.net.HttpCallback;
 import com.shaoyuan.net.HttpHelper;
@@ -105,6 +107,29 @@ public class AppActionImpl implements AppAction {
 
     @Override
     public void updatePas(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void questions(Map<String, Object> params, HttpCallback<QuestionModel> callback) {
+        //  模拟数据
+        QuestionModel model = new QuestionModel();
+        List<QuestionInfo> list = new ArrayList<>();
+        QuestionInfo info = new QuestionInfo();
+
+        info.setComname("测试标题数据");
+        info.setSpoexpain("测试标题文本");
+        list.add(info);
+        model.setInfos(list);
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void suggestionSubmit(Map<String, Object> params, HttpCallback<BaseModel> callback) {
         //  模拟数据
         BaseModel model = new BaseModel();
 

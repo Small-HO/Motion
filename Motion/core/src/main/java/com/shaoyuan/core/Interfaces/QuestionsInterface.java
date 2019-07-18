@@ -2,7 +2,7 @@ package com.shaoyuan.core.Interfaces;
 
 import android.content.Context;
 
-import com.shaoyuan.model.dataInfo.QuestionInfo;
+import com.shaoyuan.model.dataModel.QuestionModel;
 
 /**
  * Created by small-ho on 2019/7/17 17:15
@@ -13,8 +13,11 @@ public interface QuestionsInterface {
         Context getContext();
 
         void initView();
+        void initData();
         
-        void initQuestionDatas(QuestionInfo info);
+        void initQuestionDatas(QuestionModel model);
+
+        void showLog(String log);
     }
 
     interface presenter{

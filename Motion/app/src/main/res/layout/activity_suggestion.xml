@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SuggestionActivity">
+
+    <include layout="@layout/ui_title_back"/>
+
+    <EditText
+        android:id="@+id/et_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"
+        android:layout_margin="@dimen/dp_20"
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorEditText"
+        android:hint="@string/tv_mine_suggestion"
+        android:gravity="top"
+        android:maxLength="500"
+        android:textSize="@dimen/sp_14"
+        />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:gravity="right"
+        android:text="0/500"
+        />
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@drawable/ic_recipe_motion_button"
+        android:layout_marginTop="@dimen/dp_50"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:text="@string/tv_button_ok"
+        android:gravity="center"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/colorWhite"
+        />
+
+</LinearLayout>

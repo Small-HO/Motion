@@ -15,5 +15,6 @@ public interface MineInterface {
         void toUserPage();
         void toSecurePage();
         void toQuestions();
+        void toSuggestion();
     }
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.IntakeActivity">
+
+    <include layout="@layout/ui_title_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_152"
+            android:background="@mipmap/healthdatabg"
+            />
+
+        <com.shaoyuan.motion.custom.EnergyProgressBar
+            android:id="@+id/EnergyProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:layout_marginTop="@dimen/dp_53"
+            android:layout_marginRight="@dimen/dp_18" />
+
+        <TextView
+            android:id="@+id/tv_reporter"
+            android:layout_width="@dimen/dp_125"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/ic_data_intake_button"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="@string/tv_data_trend_reporter"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/sp_15"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

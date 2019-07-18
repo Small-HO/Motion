@@ -3,6 +3,7 @@ package com.shaoyuan.core.action;
 import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.QuestionModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.net.HttpCallback;
 
@@ -27,4 +28,10 @@ public interface AppAction {
 
     //  修改密码
     void updatePas(Map<String,Object> params,HttpCallback<BaseModel> callback);
+
+    //  常见问题
+    void questions(Map<String,Object> params, HttpCallback<QuestionModel> callback);
+
+    //  提交意见反馈信息
+    void suggestionSubmit(Map<String,Object> params,HttpCallback<BaseModel> callback);
 }
