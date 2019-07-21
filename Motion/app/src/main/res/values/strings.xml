@@ -42,9 +42,19 @@
     <string name="tv_data_module_constitution">体质</string>
 
     <string name="tv_data_trend_reporter">报告分析</string>
-
-
-
+    <string name="tv_data_loss_overall">今日总消耗</string>
+    <string name="tv_data_kilocalorie">千卡</string>
+    <string name="tv_data_overall">消耗</string>
+    <string name="tv_data_intake">摄入</string>
+    <string name="tv_data_diet">饮食</string>
+    <string name="tv_data_work">工作</string>
+    <string name="tv_data_sleep">睡觉</string>
+    <string name="tv_data_motion">运动</string>
+    <string name="tv_data_fashion">体闲</string>
+    <string name="tv_data_brekker">早餐</string>
+    <string name="tv_data_lunch">午餐</string>
+    <string name="tv_data_supper">晚餐</string>
+    <string name="tv_data_snacks">加餐</string>
 
 
     <string name="tv_mine_header_order">订单</string>
@@ -95,4 +105,5 @@
 
     <!-- 意见反馈 -->
     <string name="tv_mine_suggestion">请输入您的意见和建议，工作人员会在第一时间进行评估处理。感谢您的热心反馈！</string>
+    <string name="_0">0</string>
 </resources>

@@ -30,11 +30,13 @@ dependencies {
     implementation project(':core')
     implementation project(':aspectj')
 
+    implementation dependencies.support.design
     implementation dependencies.utils.layouts
     implementation dependencies.support.appcompat
     implementation dependencies.support.recyclerView
 
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
     testImplementation dependencies.utils.junit
     androidTestImplementation dependencies.utils.runner
     androidTestImplementation dependencies.utils.espresso

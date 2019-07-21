@@ -2,6 +2,8 @@ package com.shaoyuan.core.action;
 
 import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
+import com.shaoyuan.model.dataModel.CountcontodayModel;
+import com.shaoyuan.model.dataModel.DataReportModel;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.QuestionModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
@@ -34,4 +36,10 @@ public interface AppAction {
 
     //  提交意见反馈信息
     void suggestionSubmit(Map<String,Object> params,HttpCallback<BaseModel> callback);
+
+    //  消耗摄入
+    void countconTody(Map<String,Object> params, HttpCallback<CountcontodayModel> callback);
+
+    //  报告分析
+    void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);
 }
