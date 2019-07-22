@@ -16,7 +16,6 @@ import com.shaoyuan.motion.R;
 /**
  * Created by zhb on 2017/2/26.
  */
-
 public class CircleProgressBar extends View {
     private Object lock = new Object();
     /**
@@ -132,7 +131,7 @@ public class CircleProgressBar extends View {
         int width = measureHanlder(widthMeasureSpec);
         int height = measureHanlder(heightMeasureSpec);
         mCircleWidth = (width < height) ? width : height;
-        mCircleWidth = mCircleWidth+300;
+        mCircleWidth = mCircleWidth + 300;
         setMeasuredDimension(mCircleWidth, mCircleWidth);
         mRect = new RectF(mCurrentTickSize * 2, mCurrentTickSize * 2, mCircleWidth - mCurrentTickSize * 2, mCircleWidth - mCurrentTickSize * 2);
         int b = 26;

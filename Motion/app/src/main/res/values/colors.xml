@@ -27,6 +27,8 @@
     <color name="colorEditText">#F5F5F5</color>         <!-- 输入框颜色-->
     <color name="colorXiaohao">#333333</color>          <!-- 消耗摄入标题 -->
     <color name="colorConsume">#666666</color>          <!-- 今日总消耗 -->
+    <color name="colorQk">#fffa2b4c</color>             <!-- 千卡 -->
+    <color name="colorSearch">#fff5f5f5</color>         <!-- 搜索框背景 -->
 
 
 </resources>

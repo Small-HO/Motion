@@ -106,4 +106,12 @@
     <!-- 意见反馈 -->
     <string name="tv_mine_suggestion">请输入您的意见和建议，工作人员会在第一时间进行评估处理。感谢您的热心反馈！</string>
     <string name="_0">0</string>
+
+
+    <string name="tv_work">工作</string>
+    <string name="tv_time">时间</string>
+    <string name="tv_sleep">睡眠</string>
+    <string name="tv_housewife">家务</string>
+    <string name="tv_dailylife">日常生活</string>
+    <string name="tv_hint_sport">请输入运动名称</string>
 </resources>
