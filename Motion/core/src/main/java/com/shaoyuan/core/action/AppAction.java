@@ -7,6 +7,7 @@ import com.shaoyuan.model.dataModel.DataReportModel;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.QuestionModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.net.HttpCallback;
 
 import java.util.Map;
@@ -42,4 +43,8 @@ public interface AppAction {
 
     //  报告分析
     void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);
+
+    /** 消耗摄入部位 */
+    //  添加工作
+    void addWorkConsume(Map<String,Object> params, HttpCallback<WorkModel> callback);
 }

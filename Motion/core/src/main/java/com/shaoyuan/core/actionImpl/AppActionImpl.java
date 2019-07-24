@@ -10,11 +10,13 @@ import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataInfo.DataReportInfo;
 import com.shaoyuan.model.dataInfo.OrderInfo;
 import com.shaoyuan.model.dataInfo.QuestionInfo;
+import com.shaoyuan.model.dataInfo.WorkInfo;
 import com.shaoyuan.model.dataModel.CountcontodayModel;
 import com.shaoyuan.model.dataModel.DataReportModel;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.QuestionModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.net.HttpCallback;
 import com.shaoyuan.net.HttpHelper;
 
@@ -161,7 +163,27 @@ public class AppActionImpl implements AppAction {
         info.setFoodh("10");
 
         infos.add(info);
+
+
         model.setGetdata(infos);
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void addWorkConsume(Map<String, Object> params, HttpCallback<WorkModel> callback) {
+        WorkModel model = new WorkModel();
+        List<WorkInfo> infos = new ArrayList<>();
+        WorkInfo info = new WorkInfo();
+
+        for (int i = 0; i < 3; i++) {
+
+            info.setTypenamee("介绍");
+            infos.add(info);
+        }
+
+        model.setGetdata(infos);
+
 
         callback.onSuccess(model);
     }

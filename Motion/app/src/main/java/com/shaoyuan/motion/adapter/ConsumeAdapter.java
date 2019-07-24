@@ -25,7 +25,7 @@ public class ConsumeAdapter extends BaseRecyclerAdapter<DataReportInfo> {
     }
 
     @Override
-    protected void onBindViewHolder(RecyclerViewHolder holder, DataReportInfo bean) {
+    protected void onBindViewHolder(RecyclerViewHolder holder, DataReportInfo bean, int position) {
         TextView name = holder.getItemView(R.id.tv_name);
         ProgressView pv = holder.getItemView(R.id.progress_view);
         TextView percent = holder.getItemView(R.id.tv_percent);
