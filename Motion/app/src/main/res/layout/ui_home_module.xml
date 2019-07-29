@@ -9,32 +9,6 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/tv_module_recipe"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_recipe"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_recipe"
-            />
-
-        <TextView
-            android:id="@+id/tv_module_plan"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_plan"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_plan"
-            />
-
-        <TextView
             android:id="@+id/tv_module_medical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -60,66 +34,96 @@
             android:text="@string/tv_home_module_record"
             />
 
+        <TextView
+            android:id="@+id/tv_module_recipe"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:drawableTop="@mipmap/ic_home_recipe"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/tv_home_module_recipe"
+            />
+
+        <TextView
+            android:id="@+id/tv_module_plan"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:drawableTop="@mipmap/ic_home_plan"
+            android:drawablePadding="@dimen/dp_5"
+            android:text="@string/tv_home_module_plan"
+            />
+
+
+
+
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:orientation="horizontal">
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/colorWhite"-->
+        <!--android:orientation="horizontal">-->
 
-        <TextView
-            android:id="@+id/tv_module_site"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <!--<TextView-->
+            <!--android:id="@+id/tv_module_site"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
 
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_site"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_site"
-            />
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:drawableTop="@mipmap/ic_home_site"-->
+            <!--android:drawablePadding="@dimen/dp_5"-->
+            <!--android:text="@string/tv_home_module_site"-->
+            <!--/>-->
 
-        <TextView
-            android:id="@+id/tv_module_equipment"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <!--<TextView-->
+            <!--android:id="@+id/tv_module_equipment"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
 
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_equipment"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_equipment"
-            />
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:drawableTop="@mipmap/ic_home_equipment"-->
+            <!--android:drawablePadding="@dimen/dp_5"-->
+            <!--android:text="@string/tv_home_module_equipment"-->
+            <!--/>-->
 
-        <TextView
-            android:id="@+id/tv_module_coach"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <!--<TextView-->
+            <!--android:id="@+id/tv_module_coach"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
 
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_coach"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_coach"
-            />
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:drawableTop="@mipmap/ic_home_coach"-->
+            <!--android:drawablePadding="@dimen/dp_5"-->
+            <!--android:text="@string/tv_home_module_coach"-->
+            <!--/>-->
 
-        <TextView
-            android:id="@+id/tv_module_curriculum"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+        <!--<TextView-->
+            <!--android:id="@+id/tv_module_curriculum"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
 
-            android:gravity="center"
-            android:padding="@dimen/dp_10"
-            android:drawableTop="@mipmap/ic_home_curriculum"
-            android:drawablePadding="@dimen/dp_5"
-            android:text="@string/tv_home_module_curriculum"
-            />
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/dp_10"-->
+            <!--android:drawableTop="@mipmap/ic_home_curriculum"-->
+            <!--android:drawablePadding="@dimen/dp_5"-->
+            <!--android:text="@string/tv_home_module_curriculum"-->
+            <!--/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
 </merge>

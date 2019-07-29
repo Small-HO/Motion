@@ -10,7 +10,7 @@
 
     <string name="tv_home_module_recipe">运动处方</string>
     <string name="tv_home_module_plan">运动计划</string>
-    <string name="tv_home_module_medical">健康医疗</string>
+    <string name="tv_home_module_medical">健康体检</string>
     <string name="tv_home_module_record">健康档案</string>
 
     <string name="tv_recipe_grade">处方等级</string>
