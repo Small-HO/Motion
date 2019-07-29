@@ -2,10 +2,13 @@ package com.shaoyuan.core.action;
 
 import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
+import com.shaoyuan.model.dataInfo.IllnessInfo;
 import com.shaoyuan.model.dataModel.CountcontodayModel;
 import com.shaoyuan.model.dataModel.DataReportModel;
+import com.shaoyuan.model.dataModel.IllnessModel;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.QuestionModel;
+import com.shaoyuan.model.dataModel.ScreenModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.net.HttpCallback;
@@ -44,7 +47,20 @@ public interface AppAction {
     //  报告分析
     void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);
 
+
+    /** ------------------------------------- 首页 ---------------------------------------*/
+
+    //  健康体检列表
+    void sceenList(Map<String,Object> params, HttpCallback<ScreenModel> callback);
+    //  适用人群
+    void crowdList(Map<String,Object> params, HttpCallback<IllnessModel> callback);
+    //  高发疾病
+    void illnessList(Map<String,Object> params,HttpCallback<IllnessModel> callback);
+
+
+
     /** 消耗摄入部位 */
     //  添加工作
     void addWorkConsume(Map<String,Object> params, HttpCallback<WorkModel> callback);
+
 }

@@ -18,7 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.WorkActivity" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:name=".ui.activity.SelectScreenActivity"></activity>
+        <activity
+            android:name=".ui.activity.WorkActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
         <activity android:name=".ui.activity.DietActivity" />
         <activity android:name=".ui.activity.ConsumeActivity" />
         <activity android:name=".ui.activity.AnalysisReportsActivity" />

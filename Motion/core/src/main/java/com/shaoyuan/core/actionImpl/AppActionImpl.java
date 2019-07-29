@@ -8,13 +8,16 @@ import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.model.BaseModel;
 import com.shaoyuan.model.SmsCode;
 import com.shaoyuan.model.dataInfo.DataReportInfo;
+import com.shaoyuan.model.dataInfo.IllnessInfo;
 import com.shaoyuan.model.dataInfo.OrderInfo;
 import com.shaoyuan.model.dataInfo.QuestionInfo;
 import com.shaoyuan.model.dataInfo.WorkInfo;
 import com.shaoyuan.model.dataModel.CountcontodayModel;
 import com.shaoyuan.model.dataModel.DataReportModel;
+import com.shaoyuan.model.dataModel.IllnessModel;
 import com.shaoyuan.model.dataModel.OrderModel;
 import com.shaoyuan.model.dataModel.QuestionModel;
+import com.shaoyuan.model.dataModel.ScreenModel;
 import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.net.HttpCallback;
@@ -167,6 +170,46 @@ public class AppActionImpl implements AppAction {
 
         model.setGetdata(infos);
 
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void sceenList(Map<String, Object> params, HttpCallback<ScreenModel> callback) {
+        //  模拟数据
+
+
+
+    }
+
+    @Override
+    public void crowdList(Map<String, Object> params, HttpCallback<IllnessModel> callback) {
+        //  模拟数据
+        IllnessModel model = new IllnessModel();
+        List<IllnessInfo> list = new ArrayList<>();
+        IllnessInfo info = new IllnessInfo();
+
+        for (int i = 0; i < 11; i++) {
+            info.setItem("测试");
+            list.add(info);
+        }
+
+        model.setList(list);
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void illnessList(Map<String, Object> params, HttpCallback<IllnessModel> callback) {
+        //  模拟数据
+        IllnessModel model = new IllnessModel();
+        List<IllnessInfo> list = new ArrayList<>();
+        IllnessInfo info = new IllnessInfo();
+
+        for (int i = 0; i < 11; i++) {
+            info.setItem("测试");
+            list.add(info);
+        }
+
+        model.setList(list);
         callback.onSuccess(model);
     }
 
