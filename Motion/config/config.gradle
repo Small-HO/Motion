@@ -27,7 +27,8 @@ ext {
             okHttpVersion           : "+",
             xutilsVersion           : "3.+",
             retrofitVersion         : "2.+",
-
+            okHttp3Version          : "3.+",
+            okHttpInterceptorVersion: "3.7.0",
             bannerVersion           : "1.4.9",
             glideVersion            : "3.7.0",
     ]
@@ -56,8 +57,13 @@ ext {
                     volley:         "com.android.volley:volley:${depVersion.volleyVersion}",
                     okhttp:         "com.zhy:okhttputils:${depVersion.okHttpVersion}",
                     xutils:         "org.xutils:xutils:${depVersion.xutilsVersion}",
-
                     gson:           "com.squareup.retrofit2:converter-gson:${depVersion.retrofitVersion}",
+                    rxjava:         "com.squareup.retrofit2:adapter-rxjava2:${depVersion.retrofitVersion}",
+                    rxandroid:      "io.reactivex.rxjava2:rxandroid:${depVersion.retrofitVersion}",
+                    retrofit:       "com.squareup.retrofit2:retrofit:${depVersion.retrofitVersion}",
+                    scalars:        "com.squareup.retrofit2:converter-scalars:${depVersion.retrofitVersion}",
+                    okhttp3:        "com.squareup.okhttp3:okhttp:${depVersion.okHttp3Version}",
+                    okhttpinterceptor: "com.squareup.okhttp3:logging-interceptor:${depVersion.okHttpInterceptorVersion}",
             ],
             //  其他引用
             other:  [
