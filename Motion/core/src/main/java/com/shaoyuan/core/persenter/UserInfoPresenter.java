@@ -25,7 +25,7 @@ public class UserInfoPresenter implements UserInfoInterface.presenter {
 
     @Override
     public void initUserDatas() {
-        action.userInfo(userParams(), new HttpCallback<UserInfoModel>() {
+        /*action.userInfo(userParams(), new HttpCallback<UserInfoModel>() {
             @Override
             public void onSuccess(UserInfoModel model) {
                 view.showLog("用户详情：" + model);
@@ -36,12 +36,12 @@ public class UserInfoPresenter implements UserInfoInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     @Override
     public void saveUserDatas() {
-        action.userInfoSave(userSaveParams(), new HttpCallback<BaseModel>() {
+        /*action.userInfoSave(userSaveParams(), new HttpCallback<BaseModel>() {
             @Override
             public void onSuccess(BaseModel baseModel) {
 
@@ -51,7 +51,7 @@ public class UserInfoPresenter implements UserInfoInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> userSaveParams() {

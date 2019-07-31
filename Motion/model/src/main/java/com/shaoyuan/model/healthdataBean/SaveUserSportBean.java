@@ -1,13 +1,10 @@
 package com.shaoyuan.model.healthdataBean;
 
-import java.util.List;
-
 /**
- * Created by gzl on 2019/7/30 9:43
- * title：上传体能问卷答案
+ * Created by gzl on 2019/7/30 17:09
+ * title：保存用户户外运动信息
  */
-public class UploadingStaminaAnswerBean {
-
+public class SaveUserSportBean {
     private String repcode;
     private String repmsg;
     private String method;

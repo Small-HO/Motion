@@ -10,24 +10,35 @@ import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.CourseBookingBean;
 import com.shaoyuan.model.healthdataBean.DeleteOneFoodBean;
 import com.shaoyuan.model.healthdataBean.EnergyConsumeBean;
+import com.shaoyuan.model.healthdataBean.EquipmentBookingBean;
+import com.shaoyuan.model.healthdataBean.EquipmentMakeDateBean;
+import com.shaoyuan.model.healthdataBean.HistoryPhysicalDateBean;
 import com.shaoyuan.model.healthdataBean.IntakeFoodBean;
 import com.shaoyuan.model.healthdataBean.MakePhysicalBean;
 import com.shaoyuan.model.healthdataBean.PhysicalResultsBean;
 import com.shaoyuan.model.healthdataBean.SaveAllFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveDiseaseListBean;
 import com.shaoyuan.model.healthdataBean.SaveDiseaseNameBean;
+import com.shaoyuan.model.healthdataBean.SavePhysicalListBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaResultBean;
 import com.shaoyuan.model.healthdataBean.SaveSumIntakeBean;
 import com.shaoyuan.model.healthdataBean.SaveUserFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveUserSportBean;
 import com.shaoyuan.model.healthdataBean.SelectConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.SportsCenterBean;
 import com.shaoyuan.model.healthdataBean.UploadingPhysicalBean;
 import com.shaoyuan.model.healthdataBean.UploadingStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.UserConsumeIntakeBean;
+import com.shaoyuan.model.healthdataBean.VenueBookingBean;
+import com.shaoyuan.model.healthdataBean.VenueMakeDateBean;
 import com.shaoyuan.model.personalBean.FAQBean;
 import com.shaoyuan.model.personalBean.FeedbackBean;
 import com.shaoyuan.model.personalBean.HeadImgBean;
+import com.shaoyuan.model.personalBean.HomePageBean;
 import com.shaoyuan.model.personalBean.LoginBean;
 import com.shaoyuan.model.personalBean.MakeAnPhysicalBean;
 import com.shaoyuan.model.personalBean.PhysicalDetailsBean;
@@ -149,8 +160,43 @@ public interface AppAction {
     //获取体检报告
     void savePhysicalReport(Map<String,Object> params, HttpCallback<SavePhysicalReportBean> callback);
 
+    //获取体能/体质机构测试列表
+    void savePhysicalList(Map<String,Object> params, HttpCallback<SavePhysicalListBean> callback);
 
-    //  发送验证码
+    //获取疾病/人群标签列表
+    void saveDiseaseList(Map<String,Object> params, HttpCallback<SaveDiseaseListBean> callback);
+
+    //保存用户户外运动信息
+    void saveUserSport(Map<String,Object> params, HttpCallback<SaveUserSportBean> callback);
+
+    //获取历史体质/体能/病历日期
+    void historyPhysicalDate(Map<String,Object> params, HttpCallback<HistoryPhysicalDateBean> callback);
+
+    //运动中心
+    void sportsCenter(Map<String,Object> params, HttpCallback<SportsCenterBean> callback);
+
+    //课程预约
+    void courseBooking(Map<String,Object> params, HttpCallback<CourseBookingBean> callback);
+
+    //器材预约
+    void equipmentBooking(Map<String,Object> params, HttpCallback<EquipmentBookingBean> callback);
+
+    //场地预约
+    void venueBooking(Map<String,Object> params, HttpCallback<VenueBookingBean> callback);
+
+    //器材可预约时间段
+    void equipmentMakeDate(Map<String,Object> params, HttpCallback<EquipmentMakeDateBean> callback);
+
+    //场地可预约时间段
+    void venueMakeDate(Map<String,Object> params, HttpCallback<VenueMakeDateBean> callback);
+
+    //首页
+    void homePage(Map<String,Object> params, HttpCallback<HomePageBean> callback);
+
+
+
+
+ /*   //  发送验证码
     void sendSmsCode(Map<String,Object> params, HttpCallback<SmsCode> callback);
 
     //  订单列表
@@ -174,5 +220,5 @@ public interface AppAction {
     void countconTody(Map<String,Object> params, HttpCallback<CountcontodayModel> callback);
 
     //  报告分析
-    void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);
+    void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);*/
 }

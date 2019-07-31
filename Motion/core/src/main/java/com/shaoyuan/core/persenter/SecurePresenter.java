@@ -26,7 +26,7 @@ public class SecurePresenter implements SecureInterface.presenter {
 
     @Override
     public void updatePas() {
-        action.updatePas(params(), new HttpCallback<BaseModel>() {
+        /*action.updatePas(params(), new HttpCallback<BaseModel>() {
             @Override
             public void onSuccess(BaseModel baseModel) {
 
@@ -36,7 +36,7 @@ public class SecurePresenter implements SecureInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> params() {

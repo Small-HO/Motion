@@ -3,24 +3,35 @@ package com.shaoyuan.api;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.CourseBookingBean;
 import com.shaoyuan.model.healthdataBean.DeleteOneFoodBean;
 import com.shaoyuan.model.healthdataBean.EnergyConsumeBean;
+import com.shaoyuan.model.healthdataBean.EquipmentBookingBean;
+import com.shaoyuan.model.healthdataBean.EquipmentMakeDateBean;
+import com.shaoyuan.model.healthdataBean.HistoryPhysicalDateBean;
 import com.shaoyuan.model.healthdataBean.IntakeFoodBean;
 import com.shaoyuan.model.healthdataBean.MakePhysicalBean;
 import com.shaoyuan.model.healthdataBean.PhysicalResultsBean;
 import com.shaoyuan.model.healthdataBean.SaveAllFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveDiseaseListBean;
 import com.shaoyuan.model.healthdataBean.SaveDiseaseNameBean;
+import com.shaoyuan.model.healthdataBean.SavePhysicalListBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaResultBean;
 import com.shaoyuan.model.healthdataBean.SaveSumIntakeBean;
 import com.shaoyuan.model.healthdataBean.SaveUserFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveUserSportBean;
 import com.shaoyuan.model.healthdataBean.SelectConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.SportsCenterBean;
 import com.shaoyuan.model.healthdataBean.UploadingPhysicalBean;
 import com.shaoyuan.model.healthdataBean.UploadingStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.UserConsumeIntakeBean;
+import com.shaoyuan.model.healthdataBean.VenueBookingBean;
+import com.shaoyuan.model.healthdataBean.VenueMakeDateBean;
 import com.shaoyuan.model.personalBean.FAQBean;
 import com.shaoyuan.model.personalBean.FeedbackBean;
 import com.shaoyuan.model.personalBean.HeadImgBean;
+import com.shaoyuan.model.personalBean.HomePageBean;
 import com.shaoyuan.model.personalBean.LoginBean;
 import com.shaoyuan.model.personalBean.MakeAnPhysicalBean;
 import com.shaoyuan.model.personalBean.PhysicalDetailsBean;
@@ -359,6 +370,94 @@ public class ServiceApiImpl implements ServiceApi {
     public Observable<SavePhysicalReportBean> getSavePhysicalReport(RequestBody requestBody) {
         return getFixApid()
                 .getSavePhysicalReport(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SavePhysicalListBean> getSavePhysicalList(RequestBody requestBody) {
+        return getFixApid()
+                .getSavePhysicalList(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SaveDiseaseListBean> getSaveDiseaseList(RequestBody requestBody) {
+        return getFixApid()
+                .getSaveDiseaseList(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SaveUserSportBean> getSaveUserSport(RequestBody requestBody) {
+        return getFixApid()
+                .getSaveUserSport(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<HistoryPhysicalDateBean> getHistoryPhysicalDate(RequestBody requestBody) {
+        return getFixApid()
+                .getHistoryPhysicalDate(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SportsCenterBean> getSportsCenter(RequestBody requestBody) {
+        return getFixApid()
+                .getSportsCenter(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<CourseBookingBean> getCourseBooking(RequestBody requestBody) {
+        return getFixApid()
+                .getCourseBooking(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<EquipmentBookingBean> getEquipmentBooking(RequestBody requestBody) {
+        return getFixApid()
+                .getEquipmentBooking(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<VenueBookingBean> getVenueBooking(RequestBody requestBody) {
+        return getFixApid()
+                .getVenueBooking(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<EquipmentMakeDateBean> getEquipmentMakeDate(RequestBody requestBody) {
+        return getFixApid()
+                .getEquipmentMakeDate(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<VenueMakeDateBean> getVenueMakeDate(RequestBody requestBody) {
+        return getFixApid()
+                .getVenueMakeDate(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<HomePageBean> getHomePage(RequestBody requestBody) {
+        return getFixApid()
+                .getHomePage(requestBody)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
     }

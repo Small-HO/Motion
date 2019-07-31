@@ -14,15 +14,15 @@ import java.lang.reflect.Type;
 public abstract class HttpCallback<T> implements ICallback {
     /*@Override
     public void onSuccess(T result) {
-
     }
 */
     @Override
     public void onSuccess(Object result) {
-        Gson gson = new Gson();
+
+      /*  Gson gson = new Gson();
         Class<?> clz = analysisClassInfo(this);
-        T objResult = (T) gson.fromJson(result.toString(),clz);
-        onSuccess(objResult);
+        T objResult = (T) gson.fromJson(result.toString(),clz);*/
+        onSuccesss((T) result);
     }
 
     @Override
@@ -41,6 +41,5 @@ public abstract class HttpCallback<T> implements ICallback {
         }
     }
 
-
-    //public abstract void onSuccess(T result);
+    public abstract void onSuccesss(T result);
 }

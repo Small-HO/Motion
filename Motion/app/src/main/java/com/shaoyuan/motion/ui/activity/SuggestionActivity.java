@@ -14,6 +14,7 @@ import com.shaoyuan.core.Interfaces.SuggestionInterface;
 import com.shaoyuan.core.persenter.SuggestionPresenter;
 import com.shaoyuan.core.utils.LogUtils;
 import com.shaoyuan.model.BaseModel;
+import com.shaoyuan.model.personalBean.FeedbackBean;
 import com.shaoyuan.motion.BaseActivity;
 import com.shaoyuan.motion.R;
 
@@ -61,6 +62,13 @@ public class SuggestionActivity extends BaseActivity implements SuggestionInterf
         mTitle.setText(R.string.tv_mine_module_feedback);
         mContont.addTextChangedListener(this);
         presenter = new SuggestionPresenter(this);
+    }
+
+    @Override
+    public void initFeedback(FeedbackBean feedbackBean) {
+        if(feedbackBean.getRepcode().equals("00")){
+
+        }
     }
 
     @Override

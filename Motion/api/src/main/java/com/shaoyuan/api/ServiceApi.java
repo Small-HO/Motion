@@ -3,24 +3,35 @@ package com.shaoyuan.api;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.CourseBookingBean;
 import com.shaoyuan.model.healthdataBean.DeleteOneFoodBean;
 import com.shaoyuan.model.healthdataBean.EnergyConsumeBean;
+import com.shaoyuan.model.healthdataBean.EquipmentBookingBean;
+import com.shaoyuan.model.healthdataBean.EquipmentMakeDateBean;
+import com.shaoyuan.model.healthdataBean.HistoryPhysicalDateBean;
 import com.shaoyuan.model.healthdataBean.IntakeFoodBean;
 import com.shaoyuan.model.healthdataBean.MakePhysicalBean;
 import com.shaoyuan.model.healthdataBean.PhysicalResultsBean;
 import com.shaoyuan.model.healthdataBean.SaveAllFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveDiseaseListBean;
 import com.shaoyuan.model.healthdataBean.SaveDiseaseNameBean;
+import com.shaoyuan.model.healthdataBean.SavePhysicalListBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.SaveStaminaResultBean;
 import com.shaoyuan.model.healthdataBean.SaveSumIntakeBean;
 import com.shaoyuan.model.healthdataBean.SaveUserFoodBean;
+import com.shaoyuan.model.healthdataBean.SaveUserSportBean;
 import com.shaoyuan.model.healthdataBean.SelectConsumeTypeBean;
+import com.shaoyuan.model.healthdataBean.SportsCenterBean;
 import com.shaoyuan.model.healthdataBean.UploadingPhysicalBean;
 import com.shaoyuan.model.healthdataBean.UploadingStaminaAnswerBean;
 import com.shaoyuan.model.healthdataBean.UserConsumeIntakeBean;
+import com.shaoyuan.model.healthdataBean.VenueBookingBean;
+import com.shaoyuan.model.healthdataBean.VenueMakeDateBean;
 import com.shaoyuan.model.personalBean.FAQBean;
 import com.shaoyuan.model.personalBean.FeedbackBean;
 import com.shaoyuan.model.personalBean.HeadImgBean;
+import com.shaoyuan.model.personalBean.HomePageBean;
 import com.shaoyuan.model.personalBean.LoginBean;
 import com.shaoyuan.model.personalBean.MakeAnPhysicalBean;
 import com.shaoyuan.model.personalBean.PhysicalDetailsBean;
@@ -308,4 +319,93 @@ public interface ServiceApi {
      */
     @POST("personal")
     Observable<SavePhysicalReportBean> getSavePhysicalReport(@Body RequestBody requestBody);
+
+    /**
+     * 获取体质/体能测试列表
+     * @param requestBody
+     * @return
+     */
+    @POST("personal")
+    Observable<SavePhysicalListBean> getSavePhysicalList(@Body RequestBody requestBody);
+
+    /**
+     * 获取疾病/人群标签列表
+     * @param requestBody
+     * @return
+     */
+    @POST("personal")
+    Observable<SaveDiseaseListBean> getSaveDiseaseList(@Body RequestBody requestBody);
+
+    /**
+     * 保存用户户外运动信息
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<SaveUserSportBean> getSaveUserSport(@Body RequestBody requestBody);
+
+    /**
+     * 获取历史体质/体能/病历日期
+     * @param requestBody
+     * @return
+     */
+    @POST("personal")
+    Observable<HistoryPhysicalDateBean> getHistoryPhysicalDate(@Body RequestBody requestBody);
+
+    /**
+     * 运动中心
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<SportsCenterBean> getSportsCenter(@Body RequestBody requestBody);
+
+    /**
+     * 课程预约
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<CourseBookingBean> getCourseBooking(@Body RequestBody requestBody);
+
+    /**
+     * 器材预约
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<EquipmentBookingBean> getEquipmentBooking(@Body RequestBody requestBody);
+
+    /**
+     * 场地预约
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<VenueBookingBean> getVenueBooking(@Body RequestBody requestBody);
+
+    /**
+     * 器材可预约时间段
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<EquipmentMakeDateBean> getEquipmentMakeDate(@Body RequestBody requestBody);
+
+    /**
+     * 场地可预约时间段
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<VenueMakeDateBean> getVenueMakeDate(@Body RequestBody requestBody);
+
+    /**
+     * 首页
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<HomePageBean> getHomePage(@Body RequestBody requestBody);
+
 }

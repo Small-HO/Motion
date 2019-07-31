@@ -24,7 +24,7 @@ public class IntakePresenter implements IntakeInterface.presenter {
 
     @Override
     public void initCountcontodyData() {
-        action.countconTody(params(), new HttpCallback<CountcontodayModel>() {
+       /* action.countconTody(params(), new HttpCallback<CountcontodayModel>() {
             @Override
             public void onSuccess(CountcontodayModel model) {
                 view.showLog("消耗摄入：" + model.toString());
@@ -35,7 +35,7 @@ public class IntakePresenter implements IntakeInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> params() {
