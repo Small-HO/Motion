@@ -51,34 +51,35 @@ public class HomeFragment extends BaseFragment implements HomeInterface.view {
         initBannerView(mHomePresenter.initBannerData());
     }
 
-    @OnClick({R.id.tv_module_recipe,R.id.tv_module_plan,R.id.tv_module_medical,R.id.tv_module_record,
-            R.id.tv_module_site,R.id.tv_module_equipment,R.id.tv_module_coach,R.id.tv_module_curriculum})
+    @OnClick({R.id.tv_module_recipe,R.id.tv_module_plan,R.id.tv_module_medical,R.id.tv_module_record
+//            R.id.tv_module_site,R.id.tv_module_equipment,R.id.tv_module_coach,R.id.tv_module_curriculum
+    })
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.tv_module_recipe:     //  运动处方
-                toRecipePage();
-                break;
-            case R.id.tv_module_plan:       //  运动计划
-                toPlanPage();
-                break;
             case R.id.tv_module_medical:    //  健康医疗
                 toMedicalPage();
                 break;
             case R.id.tv_module_record:     //  健康档案
                 toRecordPage();
                 break;
-            case R.id.tv_module_site:       //  场地预约
-                toSitePage();
+            case R.id.tv_module_recipe:     //  运动处方
+                toRecipePage();
                 break;
-            case R.id.tv_module_equipment:  //  器材预约
-                toEquipmentPage();
+            case R.id.tv_module_plan:       //  运动计划
+                toPlanPage();
                 break;
-            case R.id.tv_module_coach:      //  教练预约
-                toCoachPage();
-                break;
-            case R.id.tv_module_curriculum: //  课程预约
-                toCurriculumPage();
-                break;
+//            case R.id.tv_module_site:       //  场地预约
+//                toSitePage();
+//                break;
+//            case R.id.tv_module_equipment:  //  器材预约
+//                toEquipmentPage();
+//                break;
+//            case R.id.tv_module_coach:      //  教练预约
+//                toCoachPage();
+//                break;
+//            case R.id.tv_module_curriculum: //  课程预约
+//                toCurriculumPage();
+//                break;
         }
     }
 

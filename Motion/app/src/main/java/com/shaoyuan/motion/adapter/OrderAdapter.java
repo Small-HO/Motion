@@ -26,7 +26,7 @@ public class OrderAdapter extends BaseRecyclerAdapter<OrderInfo>{
     }
 
     @Override
-    protected void onBindViewHolder(RecyclerViewHolder holder, OrderInfo bean) {
+    protected void onBindViewHolder(RecyclerViewHolder holder, OrderInfo bean, int position) {
         RelativeLayout mItem = holder.getItemView(R.id.order_list_item);
         ImageView mImage = holder.getItemView(R.id.iv_order_image);
         TextView mName = holder.getItemView(R.id.tv_name);

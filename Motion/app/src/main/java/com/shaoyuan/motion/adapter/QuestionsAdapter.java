@@ -24,11 +24,12 @@ public class QuestionsAdapter extends BaseRecyclerAdapter<QuestionInfo> {
     }
 
     @Override
-    protected void onBindViewHolder(RecyclerViewHolder holder, QuestionInfo bean) {
+    protected void onBindViewHolder(RecyclerViewHolder holder, QuestionInfo bean, int position) {
         TextView headline = holder.getItemView(R.id.tv_headline);
         TextView contont = holder.getItemView(R.id.tv_contont);
 
         headline.setText(bean.getComname());
         contont.setText(bean.getSpoexpain());
     }
+
 }

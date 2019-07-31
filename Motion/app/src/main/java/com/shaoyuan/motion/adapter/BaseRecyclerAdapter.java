@@ -36,7 +36,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
         holder.itemView.setTag(position);
         T bean = mList.get(position);
-        onBindViewHolder(holder,bean);
+        onBindViewHolder(holder,bean,position);
     }
 
     @Override
@@ -48,5 +48,5 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
     protected abstract int getLayoutResId();
 
 
-    protected abstract void onBindViewHolder(RecyclerViewHolder holder,T bean);
+    protected abstract void onBindViewHolder(RecyclerViewHolder holder,T bean,int position);
 }

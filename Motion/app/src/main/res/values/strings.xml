@@ -10,7 +10,7 @@
 
     <string name="tv_home_module_recipe">运动处方</string>
     <string name="tv_home_module_plan">运动计划</string>
-    <string name="tv_home_module_medical">健康医疗</string>
+    <string name="tv_home_module_medical">健康体检</string>
     <string name="tv_home_module_record">健康档案</string>
 
     <string name="tv_recipe_grade">处方等级</string>
@@ -114,4 +114,13 @@
     <string name="tv_housewife">家务</string>
     <string name="tv_dailylife">日常生活</string>
     <string name="tv_hint_sport">请输入运动名称</string>
+
+
+    <!-- 体检 -->
+    <string name="tv_screen">筛选</string>
+    <string name="tv_select_project">请选择体检项目</string>
+    <string name="tv_man">男性</string>
+    <string name="tv_woman">女性</string>
+    <string name="tv_crowd">适用人群</string>
+    <string name="tv_illness">高发疾病</string>
 </resources>
