@@ -24,5 +24,7 @@ public interface SelectScreenInterface {
     interface presenter {
         void initCrowdData();
         void initIllnessData();
+
+        void submit();
     }
 }

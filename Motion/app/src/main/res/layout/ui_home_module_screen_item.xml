@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rl_screen_item"
     android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:padding="@dimen/dp_10"
+    android:padding="@dimen/dp_10" android:background="@color/colorWhite"
     >
 
     <ImageView
@@ -10,7 +10,6 @@
         android:layout_width="@dimen/dp_80"
         android:layout_height="@dimen/dp_80"
         android:layout_marginEnd="@dimen/dp_10"
-        android:src="@mipmap/ic_data_constitution"
         />
 
     <TextView
@@ -20,7 +19,6 @@
 
         android:layout_toEndOf="@+id/iv_img"
         android:layout_alignTop="@+id/iv_img"
-        android:text="测试"
         />
 
     <TextView
@@ -28,8 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="记得去掉该页面的数据哦河北省石家庄市时代峰峻OA红烧豆腐水电费测死哦啊"
-
+        android:gravity="center_vertical"
         android:layout_toEndOf="@+id/iv_img"
 
         android:layout_below="@+id/tv_title"
@@ -42,7 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="￥196"
         android:textColor="@color/colorQk"
         android:textSize="@dimen/sp_16"
 
@@ -56,11 +52,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="253"
         android:textColor="@color/colorGradeRecipe"
         android:textSize="@dimen/sp_14"
 
-        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
         android:layout_toEndOf="@+id/tv_current_price"
         android:layout_alignBottom="@+id/iv_img"
         />

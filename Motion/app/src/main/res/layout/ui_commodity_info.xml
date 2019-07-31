@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:gravity="center_vertical"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/dp_2"
+            android:layout_height="@dimen/dp_10"
+            android:background="@color/line_bg_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="体检人信息"
+            android:textColor="#ff333333"
+            android:textSize="@dimen/sp_14" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="姓名"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorBlack"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:hint="请输入体检人姓名"
+            android:background="@null"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginStart="@dimen/dp_80"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="手机号"
+            android:textSize="@dimen/sp_16"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:hint="请输入体检人手机号"
+            android:background="@null"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginStart="@dimen/dp_80"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约时间"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="请选择预约时间"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginStart="@dimen/dp_80"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="身份证"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:hint="请输入证件号"
+            android:background="@null"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginStart="@dimen/dp_80"
+            />
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/calendar"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="姓名"
+            android:textSize="@dimen/sp_16"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+
+        <RadioGroup
+            android:id="@+id/sex_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_80"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="男"
+                android:textSize="@dimen/sp_16" />
+
+            <RadioButton
+                android:id="@+id/famale_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="女"
+                android:textSize="@dimen/sp_16" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/dp_10"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_1"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="选填"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginStart="@dimen/dp_80"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_60"
+    android:layout_alignParentBottom="true" android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/tv_current_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥162"
+        android:textColor="@color/colorOrderStart"
+        android:textSize="@dimen/sp_25"
+        android:padding="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_toEndOf="@+id/tv_current_price"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/kuang_orange"
+            android:padding="@dimen/dp_3"
+            android:text="专享价"
+            android:textColor="#ffff5d5d"
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/ealprices2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="¥980.5"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_reservation"
+        android:layout_width="@dimen/dp_125"
+        android:layout_height="match_parent"
+
+        android:text="立即预约"
+        android:gravity="center"
+
+        android:background="@color/line_bg_green"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentEnd="true"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BookingOrderActivity">
+
+    <include android:id="@+id/header" layout="@layout/ui_title_back"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/ui_commodity_item"/>
+            <include layout="@layout/ui_commodity_context"/>
+            <include layout="@layout/ui_commodity_info"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/ui_home_booking"/>
+
+
+</RelativeLayout>

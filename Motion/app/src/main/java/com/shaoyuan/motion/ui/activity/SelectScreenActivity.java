@@ -3,10 +3,10 @@ package com.shaoyuan.motion.ui.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.shaoyuan.core.Interfaces.SelectScreenInterface;
 import com.shaoyuan.core.persenter.SelectScreenPresenter;
@@ -68,9 +68,22 @@ public class SelectScreenActivity extends BaseActivity implements SelectScreenIn
     }
 
     @Override
-    public void initCrowdData(IllnessModel model) {
+    public void initCrowdData(final IllnessModel model) {
         mCrowd.setLayoutManager(new GridLayoutManager(this,4));
-        mCrowd.setAdapter(new CrowdAdapter(this,model.getList()));
+        final CrowdAdapter adapter = new CrowdAdapter(this, model.getList());
+        mCrowd.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new CrowdAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Toast.makeText(getContext(),"测试",Toast.LENGTH_SHORT).show();
+                if (model.getList().get(position).isSelected()) {
+                    model.getList().get(position).setSelected(false);
+                }else {
+                    model.getList().get(position).setSelected(true);
+                }
+            }
+        });
     }
 
     @Override
