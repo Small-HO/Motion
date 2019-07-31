@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.BookingOrderActivity"></activity>
+        <activity android:name=".ui.activity.BookingOrderActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
         <activity android:name=".ui.activity.PlasticSurgeryActivity" />
         <activity android:name=".ui.activity.SelectScreenActivity" />
         <activity

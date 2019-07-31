@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/dp_50"
         android:padding="@dimen/dp_10"
         android:gravity="center_vertical"
         android:background="@color/colorWhite"
@@ -19,18 +19,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_marginStart="@dimen/dp_10"
             android:text="体检人信息"
-            android:textColor="#ff333333"
-            android:textSize="@dimen/sp_14" />
+            android:textColor="@color/colorGradeData"
+            android:textSize="@dimen/sp_16" />
 
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -41,14 +40,14 @@
 
             android:text="姓名"
             android:textSize="@dimen/sp_16"
-            android:textStyle="bold"
+            android:layout_marginStart="@dimen/dp_10"
             android:layout_centerVertical="true"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorGradeData"
             />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
             android:layout_centerVertical="true"
             android:hint="请输入体检人姓名"
@@ -61,9 +60,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -74,14 +71,14 @@
 
             android:text="手机号"
             android:textSize="@dimen/sp_16"
+            android:layout_marginStart="@dimen/dp_10"
             android:layout_centerVertical="true"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorGradeData"
             />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
             android:layout_centerVertical="true"
             android:hint="请输入体检人手机号"
@@ -94,9 +91,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -104,15 +99,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:text="预约时间"
             android:textSize="@dimen/sp_16"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/colorGradeData"
             />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
             android:hint="请选择预约时间"
             android:layout_centerVertical="true"
@@ -125,9 +122,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -139,15 +134,15 @@
             android:text="身份证"
             android:layout_centerVertical="true"
             android:textSize="@dimen/sp_16"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/colorGradeData"
             />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
-            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
             android:hint="请输入证件号"
             android:background="@null"
             android:textSize="@dimen/sp_13"
@@ -165,9 +160,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -178,9 +171,9 @@
 
             android:text="姓名"
             android:textSize="@dimen/sp_16"
+            android:layout_marginStart="@dimen/dp_10"
             android:layout_centerVertical="true"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorGradeData"
             />
 
         <RadioGroup
@@ -211,9 +204,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
         android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/dp_1"
         >
@@ -223,13 +214,13 @@
             android:layout_height="wrap_content"
             android:text="备注"
             android:textSize="@dimen/sp_16"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/colorGradeData"
             />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
 
             android:hint="选填"
             android:layout_centerVertical="true"

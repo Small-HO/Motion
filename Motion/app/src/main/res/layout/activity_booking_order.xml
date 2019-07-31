@@ -21,6 +21,15 @@
             <include layout="@layout/ui_commodity_context"/>
             <include layout="@layout/ui_commodity_info"/>
 
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="温馨提示：用户可以选择微信、支付宝支付，钱包支付，并且保证信息绝对保密。"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_12" />
+
         </LinearLayout>
 
     </ScrollView>
