@@ -4,8 +4,10 @@ import com.shaoyuan.core.Interfaces.SuggestionInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;
 import com.shaoyuan.model.BaseModel;
+import com.shaoyuan.model.personalBean.FeedbackBean;
 import com.shaoyuan.net.HttpCallback;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -23,20 +25,25 @@ public class SuggestionPresenter implements SuggestionInterface.presenter {
 
     @Override
     public void submit() {
-        action.suggestionSubmit(params(), new HttpCallback<BaseModel>() {
+        action.feedback(params(), new HttpCallback<FeedbackBean>() {
             @Override
-            public void onSuccess(BaseModel baseModel) {
-                view.showLog("提交意见反馈：" + baseModel.toString());
+            public void onFailure(String e) {
+                super.onFailure(e);
             }
 
             @Override
-            public void onFailure(String e) {
-
+            public void onSuccesss(FeedbackBean result) {
+                view.showLog(result.toString());
+                view.initFeedback(result);
             }
         });
     }
 
     private Map<String, Object> params() {
-        return null;
+        Map<String,Object> map=new HashMap<>();
+        map.put("method","feedback");
+        map.put("userid","1544672478830248356");
+        map.put("feedres",view.getText());
+        return map;
     }
 }

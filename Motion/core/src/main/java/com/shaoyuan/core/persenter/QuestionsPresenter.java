@@ -23,7 +23,7 @@ public class QuestionsPresenter implements QuestionsInterface.presenter {
 
     @Override
     public void initQuestionDatas() {
-        action.questions(params(), new HttpCallback<QuestionModel>() {
+        /*action.questions(params(), new HttpCallback<QuestionModel>() {
             @Override
             public void onSuccess(QuestionModel model) {
                 view.showLog("常见问题数据：" + model.toString());
@@ -34,7 +34,7 @@ public class QuestionsPresenter implements QuestionsInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> params() {

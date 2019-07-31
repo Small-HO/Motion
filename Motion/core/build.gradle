@@ -40,4 +40,7 @@ dependencies {
     def dependencies = rootProject.ext.deps
     implementation dependencies.bugly.crashreport
     implementation dependencies.bugly.nativecrashreport
+    //标记
+    implementation dependencies.internet.rxjava
+    implementation dependencies.internet.gson
 }

@@ -1,6 +1,7 @@
 package com.shaoyuan.net;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.shaoyuan.net.interfaces.ICallback;
 
 import java.lang.reflect.ParameterizedType;
@@ -10,13 +11,23 @@ import java.lang.reflect.Type;
  * Created by small-ho on 2019/7/2 10:10
  * title：采用反射获取json所有类型
  */
-public abstract class HttpCallback<Result> implements ICallback {
+public abstract class HttpCallback<T> implements ICallback {
+    /*@Override
+    public void onSuccess(T result) {
+    }
+*/
     @Override
-    public void onSuccess(String result) {
-        Gson gson = new Gson();
+    public void onSuccess(Object result) {
+
+      /*  Gson gson = new Gson();
         Class<?> clz = analysisClassInfo(this);
-        Result objResult = (Result) gson.fromJson(result,clz);
-        onSuccess(objResult);
+        T objResult = (T) gson.fromJson(result.toString(),clz);*/
+        onSuccesss((T) result);
+    }
+
+    @Override
+    public void onFailure(String e) {
+
     }
 
     private Class<?> analysisClassInfo(Object object) {
@@ -29,5 +40,6 @@ public abstract class HttpCallback<Result> implements ICallback {
             return (Class<?>) type;
         }
     }
-    public abstract void onSuccess(Result result);
+
+    public abstract void onSuccesss(T result);
 }

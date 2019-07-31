@@ -23,7 +23,7 @@ public class OrderPresenter implements OrderInterface.presenter {
 
     @Override
     public void initOrderDatas() {
-        action.orderInfo(orderParams(), new HttpCallback<OrderModel>() {
+        /*action.orderInfo(orderParams(), new HttpCallback<OrderModel>() {
             @Override
             public void onSuccess(OrderModel model) {
                 view.showLog("订单列表请求状态：" + model.getOrderInfos().toString());
@@ -34,7 +34,7 @@ public class OrderPresenter implements OrderInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> orderParams() {

@@ -16,6 +16,7 @@ public class ConsumePersenter implements ConsumeInterface.presenter {
     private ConsumeInterface.view view;
     private AppAction action;
 
+
     public ConsumePersenter(ConsumeInterface.view view) {
         this.view = view;
         action = new AppActionImpl(view.getContext());
@@ -23,18 +24,18 @@ public class ConsumePersenter implements ConsumeInterface.presenter {
 
     @Override
     public void initConsumeDatas() {
-        action.reportsAnalyses(params(), new HttpCallback<DataReportModel>() {
+        /*action.reportsAnalyses(params(), new HttpCallback<DataReportModel>() {
             @Override
-            public void onSuccess(DataReportModel dataReportModel) {
-                view.showLog("报告分析：" + dataReportModel.toString());
-                view.initConsumeDatas(dataReportModel);
+            public void onSuccess(Object result) {
+                super.onSuccess(result);
+                view.initConsumeDatas((DataReportModel) result);
             }
 
             @Override
             public void onFailure(String e) {
-
+                super.onFailure(e);
             }
-        });
+        });*/
     }
 
     private Map<String, Object> params() {
