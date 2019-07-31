@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.activity.SiteActivity">
 
     <include layout="@layout/ui_title_back"/>
+    <LinearLayout
+        android:id="@+id/line_user"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="区域选择"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/xia"/>
+        <TextView
+            android:id="@+id/tv_venue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="场馆分类"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/xia"/>
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="价格筛选"
+            android:textSize="@dimen/sp_13"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/xia"/>
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="距离排序"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/xia"/>
+    </LinearLayout>
 
-</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_user_venue"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

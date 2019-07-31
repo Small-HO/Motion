@@ -23,7 +23,7 @@ public class WorkPresenter implements WorkInterface.presenter {
 
     @Override
     public void initClassItem() {
-        action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
+       /* action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
             @Override
             public void onSuccess(WorkModel model) {
                 view.showLog("添加工作左侧分类数据：" + model.toString());
@@ -33,13 +33,13 @@ public class WorkPresenter implements WorkInterface.presenter {
             @Override
             public void onFailure(String e) {
 
-            }
-        });
+            }*/
+       // });
     }
 
     @Override
     public void initContextItem() {
-        action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
+        /*action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
             @Override
             public void onSuccess(WorkModel model) {
                 view.showLog("添加工作右侧详情数据：" + model);
@@ -50,7 +50,7 @@ public class WorkPresenter implements WorkInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> contextItemParams() {

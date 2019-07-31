@@ -23,7 +23,7 @@ public class ScreenPresenter implements ScreenInreface.presenter {
 
     @Override
     public void initScreenDatas() {
-        action.sceenList(params(), new HttpCallback<ScreenModel>() {
+       /* action.sceenList(params(), new HttpCallback<ScreenModel>() {
             @Override
             public void onSuccess(ScreenModel screenModel) {
                 view.showLog("健康体检列表数据：" + screenModel);
@@ -34,7 +34,7 @@ public class ScreenPresenter implements ScreenInreface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> params() {

@@ -2,6 +2,7 @@ package com.shaoyuan.core.actionImpl;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
 import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
@@ -71,6 +72,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
+
 /**
  * Created by small-ho on 2019/7/2 13:45
  * title：核心层实现类
@@ -133,8 +139,31 @@ public class AppActionImpl implements AppAction {
     }
 
     @Override
-    public void feedback(Map<String, Object> params, HttpCallback<FeedbackBean> callback) {
+    public void feedback(Map<String, Object> params, final HttpCallback<FeedbackBean> callback) {
+        Gson gson=new Gson();
+        String s = gson.toJson(params);
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
+        ServiceApiImpl.getInstance().getFeedback(requestBody).subscribe(new Observer<FeedbackBean>() {
+            @Override
+            public void onSubscribe(Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(FeedbackBean feedbackBean) {
+                callback.onSuccess(feedbackBean);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
 
     @Override
@@ -284,7 +313,7 @@ public class AppActionImpl implements AppAction {
 
     @Override
     public void equipmentBooking(Map<String, Object> params, HttpCallback<EquipmentBookingBean> callback) {
-
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), params.toString());
     }
 
     @Override

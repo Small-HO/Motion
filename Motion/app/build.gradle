@@ -37,27 +37,24 @@ android {
 
 dependencies {
     def dependencies = rootProject.ext.deps
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation project(':model')
     implementation project(':core')
     implementation project(':aspectj')
-
+    implementation project(':api')
     implementation dependencies.support.design
     implementation dependencies.utils.layouts
     implementation dependencies.support.appcompat
     implementation dependencies.support.recyclerView
-
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:support-v4:28.0.0'
     testImplementation dependencies.utils.junit
     androidTestImplementation dependencies.utils.runner
     androidTestImplementation dependencies.utils.espresso
-
     implementation dependencies.utils.compiler
     implementation dependencies.utils.butterknife
     implementation dependencies.other.banner
     implementation dependencies.other.glide
     implementation 'com.android.support:multidex:1.0.3'
-
-
+    implementation files('libs/AMap3DMap_6.9.0_AMapNavi_6.8.0_AMapLocation_4.6.0_20190530.jar')
 }

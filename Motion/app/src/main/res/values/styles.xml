@@ -62,4 +62,13 @@
         <attr name="gradient_end_color" format="color" />
         <attr name="tick_normal_color" format="color" />
     </declare-styleable>
+
+
+    <!-- 自定义BottomPushPopupWindow动画，从底部弹出 -->
+    <style name="ZPopupWindow_BottomPushPopupWindow" parent="android:Animation">
+        <!-- 进入时的动画 -->
+        <item name="android:windowEnterAnimation">@anim/zpopupwindow_pw_push_bottom_in</item>
+        <!-- 退出时的动画 -->
+        <item name="android:windowExitAnimation">@anim/zpopupwindow_pw_push_bottom_out</item>
+    </style>
 </resources>

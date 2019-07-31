@@ -81,7 +81,7 @@ public class ServiceApiImpl implements ServiceApi {
         mOkClient = builder.build();
 
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(HttpUrl)
+                .baseUrl(Constants.HTTP_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(mOkClient)
