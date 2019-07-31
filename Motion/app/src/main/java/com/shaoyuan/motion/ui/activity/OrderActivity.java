@@ -20,11 +20,11 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-
+/** 订单 */
 public class OrderActivity extends BaseActivity implements OrderInterface.view {
     private static final String Tag = "OrderActivity";
     private static OrderPresenter mOrderPresenter;
-    String str="测试";
+
 
     @BindView(R.id.tv_back_title) TextView mTitle;
     @BindView(R.id.recycler_view) RecyclerView mOrderList;
