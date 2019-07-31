@@ -53,6 +53,11 @@ public class SelectScreenPresenter implements SelectScreenInterface.presenter {
         });
     }
 
+    @Override
+    public void submit() {
+
+    }
+
     private Map<String, Object> illnessParams() {
         return null;
     }

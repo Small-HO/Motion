@@ -19,6 +19,11 @@ import java.util.List;
 public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
 
     private Context context;
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     public ScreenAdapter(Context mContext, List<ScreenInfo> mList) {
         super(mContext, mList);
@@ -31,7 +36,7 @@ public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
     }
 
     @Override
-    protected void onBindViewHolder(RecyclerViewHolder holder, ScreenInfo bean, int position) {
+    protected void onBindViewHolder(RecyclerViewHolder holder, ScreenInfo bean, final int position) {
         RelativeLayout mItem = holder.getItemView(R.id.rl_screen_item);
 
         ImageView mImage = holder.getItemView(R.id.iv_img);
@@ -40,18 +45,21 @@ public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
         TextView mCurrent = holder.getItemView(R.id.tv_current_price);
         TextView mOriginal = holder.getItemView(R.id.tv_original_price);
 
-
         Glide.with(context).load("").into(mImage);
-        mTitle.setText("");
-        mContext.setText("");
-        mCurrent.setText("");
-        mOriginal.setText("");
+        mTitle.setText(bean.getTitle());
+        mContext.setText(bean.getContext());
+        mCurrent.setText(bean.getPrices());
+        mOriginal.setText(bean.getPrice());
 
         mItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                onItemClickListener.onItemClick(position);
             }
         });
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }

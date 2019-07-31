@@ -123,4 +123,9 @@
     <string name="tv_woman">女性</string>
     <string name="tv_crowd">适用人群</string>
     <string name="tv_illness">高发疾病</string>
+
+    <string name="tv_retreat">退</string>
+    <string name="tv_authority">权</string>
+    <string name="tv_change">改</string>
+    <string name="tv_after">后</string>
 </resources>

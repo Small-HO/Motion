@@ -19,6 +19,7 @@ public interface ScreenInreface {
         void initScreenDatas(ScreenModel model);
 
         void toScreenPage();
+        void toPlasticPage();
 
         void showLog(String log);
     }

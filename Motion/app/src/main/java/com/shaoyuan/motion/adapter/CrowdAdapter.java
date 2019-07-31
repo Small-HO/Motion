@@ -19,6 +19,12 @@ public class CrowdAdapter extends BaseRecyclerAdapter<IllnessInfo> {
     private Context context;
     private List<IllnessInfo> list;
 
+    private OnItemClickListener onItemClickListener;
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
     public CrowdAdapter(Context mContext, List<IllnessInfo> mList) {
         super(mContext, mList);
         this.context = mContext;
@@ -36,13 +42,17 @@ public class CrowdAdapter extends BaseRecyclerAdapter<IllnessInfo> {
         final TextView item = holder.getItemView(R.id.tv_select_item);
 
         item.setText(bean.getItem());
-
         items.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 item.setBackgroundResource(R.drawable.radiobutton_background_checked);
                 item.setTextColor(context.getResources().getColor(R.color.colorWhite));
+                onItemClickListener.onItemClick(position);
             }
         });
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }

@@ -69,12 +69,25 @@ public class MedicalActivity extends BaseActivity implements ScreenInreface.view
     @Override
     public void initScreenDatas(ScreenModel model) {
         mItem.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        mItem.setAdapter(new ScreenAdapter(this,model.getList()));
+        ScreenAdapter adapter = new ScreenAdapter(this, model.getList());
+
+        mItem.setAdapter(adapter);
+        adapter.setOnItemClickListener(new ScreenAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                toPlasticPage();
+            }
+        });
     }
 
     @Override
     public void toScreenPage() {
         startActivity(new Intent(this, SelectScreenActivity.class));
+    }
+
+    @Override
+    public void toPlasticPage() {
+        startActivity(new Intent(this,PlasticSurgeryActivity.class));
     }
 
     @Override

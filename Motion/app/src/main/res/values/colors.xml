@@ -31,4 +31,8 @@
     <color name="colorSearch">#fff5f5f5</color>         <!-- 搜索框背景 -->
 
 
+
+    <color name="line_bg_green">#21C7C0</color>
+
+
 </resources>

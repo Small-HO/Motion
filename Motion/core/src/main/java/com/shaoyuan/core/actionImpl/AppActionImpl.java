@@ -11,6 +11,7 @@ import com.shaoyuan.model.dataInfo.DataReportInfo;
 import com.shaoyuan.model.dataInfo.IllnessInfo;
 import com.shaoyuan.model.dataInfo.OrderInfo;
 import com.shaoyuan.model.dataInfo.QuestionInfo;
+import com.shaoyuan.model.dataInfo.ScreenInfo;
 import com.shaoyuan.model.dataInfo.WorkInfo;
 import com.shaoyuan.model.dataModel.CountcontodayModel;
 import com.shaoyuan.model.dataModel.DataReportModel;
@@ -167,7 +168,6 @@ public class AppActionImpl implements AppAction {
 
         infos.add(info);
 
-
         model.setGetdata(infos);
 
         callback.onSuccess(model);
@@ -176,9 +176,19 @@ public class AppActionImpl implements AppAction {
     @Override
     public void sceenList(Map<String, Object> params, HttpCallback<ScreenModel> callback) {
         //  模拟数据
+        ScreenModel model = new ScreenModel();
+        List<ScreenInfo> infos = new ArrayList<>();
+        ScreenInfo info = new ScreenInfo();
 
+        info.setTitle("测试标题");
+        info.setContext("河北省事件装饰");
+        info.setPrice("￥520");
+        info.setPrices("￥300");
 
+        infos.add(info);
+        model.setList(infos);
 
+        callback.onSuccess(model);
     }
 
     @Override
