@@ -24,7 +24,7 @@ public class BookingOrderActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         mTitle.setText("预约订单");
-        //  改变颜色
+        //  改变颜色 Ceshi
         SpannableStringBuilder builder = new SpannableStringBuilder(mHint.getText().toString());
         ForegroundColorSpan colorSpan = new ForegroundColorSpan(Color.RED);
         builder.setSpan(colorSpan, 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
