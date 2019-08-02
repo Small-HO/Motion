@@ -1,5 +1,9 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
+import com.shaoyuan.model.dierbanBean.SiteBean;
+import com.shaoyuan.model.dierbanBean.SiteDetailBean;
+import com.shaoyuan.model.dierbanBean.SiteScreenBean;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -408,7 +412,41 @@ public interface ServiceApi {
     @POST("sportplan")
     Observable<HomePageBean> getHomePage(@Body RequestBody requestBody);
 
+    /**
+     *  -----------------------第二版---------------------------
+     */
 
 
+    /**
+     * 判断是不是教练
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<JudgeCoactBean> getJudgeCoach(@Body RequestBody requestBody);
+
+    /**
+     * 场地预约列表
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<SiteBean> getSite(@Body RequestBody requestBody);
+
+    /**
+     * 场地预约筛选
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<SiteScreenBean> getSiteScreen(@Body RequestBody requestBody);
+
+    /**
+     * 场馆详情介绍-用户
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<SiteDetailBean> getSiteDetail(@Body RequestBody requestBody);
 
 }

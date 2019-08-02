@@ -5,57 +5,133 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.activity.SiteActivity">
-
-    <include layout="@layout/ui_title_back"/>
     <LinearLayout
         android:id="@+id/line_user"
-        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <include layout="@layout/ui_title_back"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_area"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="区域选择"
             android:textSize="@dimen/sp_13"
             android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:drawableRight="@drawable/xia"/>
+            android:layout_gravity="center_vertical"
+            />
+            <ImageView
+                android:id="@+id/img_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/xia"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_venue"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="场馆分类"
             android:textColor="@color/black"
             android:textSize="@dimen/sp_13"
             android:gravity="center_vertical"
-            android:drawableRight="@drawable/xia"/>
+            />
+            <ImageView
+                android:id="@+id/img_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/xia"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_price"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="价格筛选"
             android:textSize="@dimen/sp_13"
             android:textColor="@color/black"
             android:gravity="center_vertical"
-            android:drawableRight="@drawable/xia"/>
+            />
+            <ImageView
+                android:id="@+id/img_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/xia"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_distance"
-            android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="距离排序"
             android:textSize="@dimen/sp_13"
             android:gravity="center_vertical"
             android:textColor="@color/black"
-            android:drawableRight="@drawable/xia"/>
+            />
+            <ImageView
+                android:id="@+id/img_for"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/xia"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line_course"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_13"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            />
+            <ImageView
+                android:id="@+id/img_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_gravity="center_vertical"
+                android:background="@mipmap/xia"/>
+        </LinearLayout>
     </LinearLayout>
-
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rec_user_venue"
         android:layout_marginTop="@dimen/dp_5"

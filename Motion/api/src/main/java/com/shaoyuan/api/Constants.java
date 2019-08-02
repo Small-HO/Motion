@@ -25,4 +25,6 @@ public class Constants {
 
     public static double JINDDU;
     public static double WEIDU;
+
+    public static String PERTYPE;
 }

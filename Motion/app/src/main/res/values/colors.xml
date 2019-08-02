@@ -30,9 +30,9 @@
     <color name="colorQk">#fffa2b4c</color>             <!-- 千卡 -->
     <color name="colorSearch">#fff5f5f5</color>         <!-- 搜索框背景 -->
 
-
+    <color name="colorKuang">#3ABFBB</color>
 
     <color name="line_bg_green">#21C7C0</color>
 
-
+    <color name="red">#FF0000</color>
 </resources>

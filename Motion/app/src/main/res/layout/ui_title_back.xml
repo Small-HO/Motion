@@ -20,7 +20,7 @@
         android:textSize="@dimen/sp_16"
         android:textStyle="bold"
         android:layout_centerInParent="true"
-        android:textColor="@color/colorMineText"
+        android:textColor="@color/black"
         />
 
     <ImageView

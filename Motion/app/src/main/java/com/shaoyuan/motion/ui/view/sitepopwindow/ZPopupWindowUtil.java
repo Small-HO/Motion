@@ -1,7 +1,10 @@
 package com.shaoyuan.motion.ui.view.sitepopwindow;
-
 import java.util.ArrayList;
 
+/**
+ * Created by gzl on 2019/8/1 11:30
+ * title：场地弹框
+ */
 public class ZPopupWindowUtil {
     private ArrayList<ZPopupWindow> mDatas = new ArrayList<>();
 

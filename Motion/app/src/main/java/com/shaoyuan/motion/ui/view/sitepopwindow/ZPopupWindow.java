@@ -15,9 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
-
 import com.shaoyuan.motion.R;
 
+/**
+ * Created by gzl on 2019/8/1 11:29
+ * title：场地弹框
+ */
 public abstract class ZPopupWindow extends PopupWindow {
     private Context context;
     private WindowManager wm;
@@ -265,3 +268,4 @@ public abstract class ZPopupWindow extends PopupWindow {
         return frame.top;
     }
 }
+

@@ -30,7 +30,7 @@ ext {
             okHttp3Version          : "3.+",
             okHttpInterceptorVersion: "3.7.0",
             bannerVersion           : "1.4.9",
-            glideVersion            : "3.7.0",
+            glideVersion            : "4.8.0",
     ]
 
     //  依赖

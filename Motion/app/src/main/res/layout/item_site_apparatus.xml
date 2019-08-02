@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="@dimen/dp_8"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/img_apparatus"
+        android:layout_width="105dp"
+        android:layout_height="130dp" />
+    <TextView
+        android:id="@+id/tv_apparatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
