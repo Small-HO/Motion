@@ -29,9 +29,12 @@
 
             <TextView
                 android:id="@+id/tv_item_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                android:padding="@dimen/dp_10"
                 android:textColor="@color/colorXiaohao"
+                android:background="@color/colorWhite"
                 android:textSize="@dimen/sp_15"
                 />
 
@@ -39,17 +42,27 @@
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
                 />
 
             <TextView
                 android:id="@+id/tv_num"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                android:padding="@dimen/dp_10"
+                android:background="@color/colorWhite"
                 />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
+                android:background="@color/colorWhite"
+                android:padding="@dimen/dp_10"
                 android:orientation="horizontal">
 
                 <TextView
@@ -59,11 +72,10 @@
 
                     android:textColor="@color/colorGradeRecipe"
                     android:textSize="@dimen/sp_14"
-
                     />
 
                 <TextView
-                    android:id="@+id/tv_current_price"
+                    android:id="@+id/tv_current_price_context"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
@@ -76,6 +88,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/colorWhite"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -190,6 +205,8 @@
                 android:text="-套餐特点-"
                 android:gravity="center"
                 android:textSize="@dimen/sp_14"
+
+                android:layout_marginTop="@dimen/dp_5"
                 android:textColor="@color/colorGradeData"
                 android:background="@color/colorWhite"
                 />
@@ -197,12 +214,16 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view_item"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+
+                android:background="@color/colorWhite"
+                android:paddingTop="@dimen/dp_20"
+                android:paddingBottom="@dimen/dp_20"
+                />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_100"
-                android:layout_marginTop="@dimen/dp_125"
                 android:background="@mipmap/phydet_bg">
 
                 <LinearLayout
@@ -752,7 +773,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/taocan"
+                android:id="@+id/tv_taocan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_25"
@@ -792,7 +813,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_20"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -858,7 +879,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_10"
                 android:orientation="horizontal">
 
@@ -871,9 +892,8 @@
                     android:id="@+id/mechanismname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_10"
-                    android:layout_marginRight="@dimen/dp_30"
-                    android:text="石家庄人民医院"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_30"
                     android:textColor="#333333"
                     android:textSize="@dimen/sp_14" />
             </LinearLayout>
@@ -884,146 +904,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_20"
                 android:layout_marginRight="@dimen/dp_20"
-                android:text="地址：按时付款醋甲群殴一违法和我的"
                 android:textColor="#333333"
                 android:textSize="@dimen/sp_14" />
-
-            <LinearLayout
-                android:id="@+id/line6"
-                android:layout_width="match_parent"
-                android:layout_height="800dp"
-                android:gravity="center"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="棒棒优势"
-                    android:textSize="@dimen/dp_30" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/line7"
-                android:layout_width="match_parent"
-                android:layout_height="800dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="体检须知" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/line8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_25"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/allevaluation"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4.8"
-                            android:textColor="#21C7C0"
-                            android:textSize="@dimen/sp_18" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_10"
-                            android:text="总体点评"
-                            android:textColor="#ff333333"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="38dp"
-                        android:layout_marginLeft="@dimen/dp_30"
-                        android:layout_marginRight="@dimen/dp_30"
-                        android:background="#999999" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="服务评价"
-                                android:textColor="#ff666666"
-                                android:textSize="@dimen/sp_12" />
-
-
-                            <TextView
-                                android:id="@+id/serviceevaluation"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/dp_8"
-                                android:text="4.8"
-                                android:textColor="#ff21c7c0"
-                                android:textSize="@dimen/sp_12" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_16"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="环境评价"
-                                android:textColor="#ff666666"
-                                android:textSize="@dimen/sp_12" />
-
-
-                            <TextView
-                                android:id="@+id/enevaluation"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/dp_8"
-                                android:text="4.8"
-                                android:textColor="#ff21c7c0"
-                                android:textSize="@dimen/sp_12" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/evaluateRV"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-        </LinearLayout>
-
 
         </LinearLayout>
     </ScrollView>

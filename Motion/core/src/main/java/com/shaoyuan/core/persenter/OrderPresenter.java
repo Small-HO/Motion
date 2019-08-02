@@ -28,6 +28,7 @@ public class OrderPresenter implements OrderInterface.presenter {
             public void onSuccess(OrderModel model) {
                 view.showLog("订单列表请求状态：" + model.getOrderInfos().toString());
                 view.initOrderDatas(model);
+
             }
 
             @Override

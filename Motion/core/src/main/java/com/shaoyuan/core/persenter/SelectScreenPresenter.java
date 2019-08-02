@@ -23,34 +23,34 @@ public class SelectScreenPresenter implements SelectScreenInterface.presenter {
 
     @Override
     public void initCrowdData() {
-        action.crowdList(crowdParams(), new HttpCallback<IllnessModel>() {
-            @Override
-            public void onSuccess(IllnessModel model) {
-                view.showLog("使用人群返回数据：" + model);
-                view.initCrowdData(model);
-            }
-
-            @Override
-            public void onFailure(String e) {
-
-            }
-        });
+//        action.crowdList(crowdParams(), new HttpCallback<IllnessModel>() {
+//            @Override
+//            public void onSuccess(IllnessModel model) {
+//                view.showLog("使用人群返回数据：" + model);
+//                view.initCrowdData(model);
+//            }
+//
+//            @Override
+//            public void onFailure(String e) {
+//
+//            }
+//        });
     }
 
     @Override
     public void initIllnessData() {
-        action.illnessList(illnessParams(), new HttpCallback<IllnessModel>() {
-            @Override
-            public void onSuccess(IllnessModel model) {
-                view.showLog("高发疾病返回数据：" + model);
-                view.initIllnessData(model);
-            }
-
-            @Override
-            public void onFailure(String e) {
-
-            }
-        });
+//        action.illnessList(illnessParams(), new HttpCallback<IllnessModel>() {
+//            @Override
+//            public void onSuccess(IllnessModel model) {
+//                view.showLog("高发疾病返回数据：" + model);
+//                view.initIllnessData(model);
+//            }
+//
+//            @Override
+//            public void onFailure(String e) {
+//
+//            }
+//        });
     }
 
     @Override

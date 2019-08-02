@@ -23,34 +23,34 @@ public class WorkPresenter implements WorkInterface.presenter {
 
     @Override
     public void initClassItem() {
-        action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
-            @Override
-            public void onSuccess(WorkModel model) {
-                view.showLog("添加工作左侧分类数据：" + model.toString());
-                view.initClassItem(model);
-            }
-
-            @Override
-            public void onFailure(String e) {
-
-            }
-        });
+//        action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
+//            @Override
+//            public void onSuccess(WorkModel model) {
+//                view.showLog("添加工作左侧分类数据：" + model.toString());
+//                view.initClassItem(model);
+//            }
+//
+//            @Override
+//            public void onFailure(String e) {
+//
+//            }
+//        });
     }
 
     @Override
     public void initContextItem() {
-        action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
-            @Override
-            public void onSuccess(WorkModel model) {
-                view.showLog("添加工作右侧详情数据：" + model);
-                view.initContextItem(model);
-            }
-
-            @Override
-            public void onFailure(String e) {
-
-            }
-        });
+//        action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
+//            @Override
+//            public void onSuccess(WorkModel model) {
+//                view.showLog("添加工作右侧详情数据：" + model);
+//                view.initContextItem(model);
+//            }
+//
+//            @Override
+//            public void onFailure(String e) {
+//
+//            }
+//        });
     }
 
     private Map<String, Object> contextItemParams() {

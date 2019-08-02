@@ -1,12 +1,5 @@
 package com.shaoyuan.core.action;
 
-import com.shaoyuan.model.BaseModel;
-import com.shaoyuan.model.SmsCode;
-import com.shaoyuan.model.dataModel.CountcontodayModel;
-import com.shaoyuan.model.dataModel.DataReportModel;
-import com.shaoyuan.model.dataModel.OrderModel;
-import com.shaoyuan.model.dataModel.QuestionModel;
-import com.shaoyuan.model.dataModel.UserInfoModel;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;

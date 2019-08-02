@@ -156,5 +156,31 @@ public class PhysicalListBean {
         public void setSetmealid(String setmealid) {
             this.setmealid = setmealid;
         }
+
+        @Override
+        public String toString() {
+            return "PhysicallistBean{" +
+                    "setmealname='" + setmealname + '\'' +
+                    ", setmealprice='" + setmealprice + '\'' +
+                    ", setmealpic='" + setmealpic + '\'' +
+                    ", crowd='" + crowd + '\'' +
+                    ", mechaddress='" + mechaddress + '\'' +
+                    ", mechname='" + mechname + '\'' +
+                    ", setmealprices='" + setmealprices + '\'' +
+                    ", lng='" + lng + '\'' +
+                    ", lat='" + lat + '\'' +
+                    ", setmealid='" + setmealid + '\'' +
+                    '}';
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "PhysicalListBean{" +
+                "repcode='" + repcode + '\'' +
+                ", repmsg='" + repmsg + '\'' +
+                ", method='" + method + '\'' +
+                ", physicallist=" + physicallist +
+                '}';
     }
 }

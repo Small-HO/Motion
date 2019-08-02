@@ -1,14 +1,16 @@
 package com.shaoyuan.motion.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
-import android.view.View;
+import android.graphics.Paint;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.shaoyuan.model.dataInfo.ScreenInfo;
+import com.shaoyuan.model.personalBean.PhysicalListBean;
 import com.shaoyuan.motion.R;
+import com.shaoyuan.motion.utils.ImageLoader;
 
 import java.util.List;
 
@@ -16,7 +18,7 @@ import java.util.List;
  * Created by small-ho on 2019/7/29 9:44
  * title：健康体检列表适配器
  */
-public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
+public class ScreenAdapter extends BaseRecyclerAdapter<PhysicalListBean.PhysicallistBean> {
 
     private Context context;
     private OnItemClickListener onItemClickListener;
@@ -25,7 +27,7 @@ public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
         this.onItemClickListener = onItemClickListener;
     }
 
-    public ScreenAdapter(Context mContext, List<ScreenInfo> mList) {
+    public ScreenAdapter(Context mContext, List<PhysicalListBean.PhysicallistBean> mList) {
         super(mContext, mList);
         this.context = mContext;
     }
@@ -35,8 +37,9 @@ public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
         return R.layout.ui_home_module_screen_item;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    protected void onBindViewHolder(RecyclerViewHolder holder, ScreenInfo bean, final int position) {
+    protected void onBindViewHolder(RecyclerViewHolder holder, PhysicalListBean.PhysicallistBean bean, final int position) {
         RelativeLayout mItem = holder.getItemView(R.id.rl_screen_item);
 
         ImageView mImage = holder.getItemView(R.id.iv_img);
@@ -45,18 +48,16 @@ public class ScreenAdapter extends BaseRecyclerAdapter<ScreenInfo> {
         TextView mCurrent = holder.getItemView(R.id.tv_current_price);
         TextView mOriginal = holder.getItemView(R.id.tv_original_price);
 
-        Glide.with(context).load("").into(mImage);
-        mTitle.setText(bean.getTitle());
-        mContext.setText(bean.getContext());
-        mCurrent.setText(bean.getPrices());
-        mOriginal.setText(bean.getPrice());
+        mOriginal.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
 
-        mItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickListener.onItemClick(position);
-            }
-        });
+        Glide.with(context).load(bean.getSetmealpic()).into(mImage);
+        ImageLoader.displayImage(context,bean.getSetmealpic(),mImage);
+        mTitle.setText(bean.getSetmealname());
+        mContext.setText(bean.getMechaddress());
+        mCurrent.setText("￥" + bean.getSetmealprice());
+        mOriginal.setText(bean.getSetmealprices());
+
+        mItem.setOnClickListener(v -> onItemClickListener.onItemClick(position));
     }
 
     public interface OnItemClickListener {

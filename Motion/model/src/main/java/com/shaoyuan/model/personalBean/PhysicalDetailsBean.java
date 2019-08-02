@@ -13,7 +13,7 @@ public class PhysicalDetailsBean {
      * repmsg : 获取成功
      * mechaddress : 河北省石家庄市长安区广安大街时代方舟C座 四、五层
      * setmealname : 初入职场套餐二
-     * setmealprice : 0.01
+     * setmealprice : 196
      * exhpic : http://192.168.1.166:8889/img/1556529219429763556-D85C493FAF940FB79A4DCAAB7F9AA281.png
      * setmealprices : 245
      * lng : 114.608288
