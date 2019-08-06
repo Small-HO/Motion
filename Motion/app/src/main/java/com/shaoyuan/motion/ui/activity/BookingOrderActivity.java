@@ -11,22 +11,26 @@ import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.shaoyuan.api.Constants;
 import com.shaoyuan.core.Interfaces.BookingOrderInterface;
 import com.shaoyuan.core.persenter.BookingOrderPresenter;
 import com.shaoyuan.core.utils.LogUtils;
 import com.shaoyuan.core.utils.MyToast;
+import com.shaoyuan.core.utils.SharedPreferencesUtils;
 import com.shaoyuan.motion.BaseActivity;
 import com.shaoyuan.motion.R;
 import com.shaoyuan.motion.ui.dialog.CalendarDialog;
+import com.shaoyuan.motion.ui.dialog.PayDialog;
 import com.shaoyuan.motion.utils.ImageLoader;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
 @SuppressLint("SetTextI18n")
-public class BookingOrderActivity extends BaseActivity implements BookingOrderInterface.view {
+public class BookingOrderActivity extends BaseActivity implements BookingOrderInterface.view , RadioGroup.OnCheckedChangeListener {
     private static final String Tag = "BookingOrderActivity";
     private BookingOrderPresenter presenter;
 
@@ -50,8 +54,13 @@ public class BookingOrderActivity extends BaseActivity implements BookingOrderIn
     @BindView(R.id.tv_current_price)TextView mFooterCurrentPrice;
     @BindView(R.id.ealprices2)TextView mFooterEalprices;
 
+    @BindView(R.id.sex_rg)RadioGroup mSex;
+
+    private CalendarDialog dialog;
+    private PayDialog mPayDialog;
+
     private int i = 1;
-    private String sex = "0";
+    private String sex = "男";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,7 +117,11 @@ public class BookingOrderActivity extends BaseActivity implements BookingOrderIn
         builder.setSpan(colorSpan, 0, 5, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         mHint.setText(builder);
 
+        dialog = new CalendarDialog(this);
+        mPayDialog = new PayDialog(this);
+
         presenter = new BookingOrderPresenter(this);
+        mSex.setOnCheckedChangeListener(this);
     }
 
     @Override
@@ -128,11 +141,17 @@ public class BookingOrderActivity extends BaseActivity implements BookingOrderIn
         mFooterCurrentPrice.setText("￥" + getIntent().getStringExtra("setmealprice")); //   footer现价
         mFooterEalprices.setText("￥" + getIntent().getStringExtra("setmealprices"));   //   footer原价
         mFooterEalprices.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
+
+
+
+        SharedPreferencesUtils.saveString(getContext(), Constants.subject,getIntent().getStringExtra("setmealname"));
+        SharedPreferencesUtils.saveString(getContext(), Constants.price,getIntent().getStringExtra("setmealprice"));
     }
 
     @Override
     public String getID() {
-        return getIntent().getStringExtra("setmealid");
+        String setmealid = getIntent().getStringExtra("setmealid");
+        return setmealid;
     }
 
     @Override
@@ -166,11 +185,20 @@ public class BookingOrderActivity extends BaseActivity implements BookingOrderIn
     }
 
     @Override
+    public String getPrice() {
+        return getIntent().getStringExtra("setmealprice");
+    }
+
+    @Override
     public void showTimeDialog() {
         //自定义日历弹窗
-        CalendarDialog dialog = new CalendarDialog(this);
         dialog.setOnSelectedListener(time -> mTime.setText(time));
         dialog.show();
+    }
+
+    @Override
+    public void showPayDialog() {
+        mPayDialog.show();
     }
 
     @Override
@@ -181,7 +209,18 @@ public class BookingOrderActivity extends BaseActivity implements BookingOrderIn
 
     @Override
     public void showToast(String e) {
-        LogUtils.e("测试：" + e);
         MyToast.showToast(this,e);
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.male_rb:
+                sex = "男";
+                break;
+            case R.id.famale_rb:
+                sex = "女";
+                break;
+        }
     }
 }

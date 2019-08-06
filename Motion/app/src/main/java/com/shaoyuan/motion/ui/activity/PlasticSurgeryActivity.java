@@ -133,7 +133,7 @@ public class PlasticSurgeryActivity extends BaseActivity implements PlasticSurge
     @Override
     public void toOrderPage() {
         startActivity(new Intent(this,BookingOrderActivity.class)
-                .putExtra("setmealid",initInterData())
+                .putExtra("setmealid",getIntent().getStringExtra("setmealid"))
                 .putExtra("pic",bean.getExhpic())
                 .putExtra("setmealname",bean.getSetmealname())
                 .putExtra("mechname",bean.getMechname())

@@ -1,5 +1,7 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dataModel.AdwxpayModel;
+import com.shaoyuan.model.dataModel.PayModeModel;
 import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
 import com.shaoyuan.model.dierbanBean.SiteBean;
 import com.shaoyuan.model.dierbanBean.SiteDetailBean;
@@ -464,6 +466,11 @@ public class ServiceApiImpl implements ServiceApi {
                 .getHomePage(requestBody)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<AdwxpayModel> getUserPay(RequestBody requestBody) {
+        return getFixApid().getUserPay(requestBody).subscribeOn(Schedulers.newThread()).observeOn(AndroidSchedulers.mainThread());
     }
 
     /**

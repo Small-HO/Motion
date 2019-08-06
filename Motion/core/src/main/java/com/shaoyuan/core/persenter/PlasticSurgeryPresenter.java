@@ -1,7 +1,5 @@
 package com.shaoyuan.core.persenter;
 
-import android.view.View;
-
 import com.shaoyuan.core.Interfaces.PlasticSurgeryInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;

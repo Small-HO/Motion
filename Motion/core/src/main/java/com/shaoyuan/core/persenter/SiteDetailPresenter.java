@@ -26,12 +26,12 @@ public class SiteDetailPresenter implements SiteDetailInterface.presenter {
 
     @Override
     public void initSiteDetail() {
-        appAction.siteDetail(params(), new HttpCallback<SiteDetailBean>() {
-            @Override
-            public void onSuccesss(SiteDetailBean result) {
-                view.initSiteDetail(result);
-            }
-        });
+//        appAction.siteDetail(params(), new HttpCallback<SiteDetailBean>() {
+//            @Override
+//            public void onSuccesss(SiteDetailBean result) {
+//                view.initSiteDetail(result);
+//            }
+//        });
     }
 
     private Map<String,Object> params(){

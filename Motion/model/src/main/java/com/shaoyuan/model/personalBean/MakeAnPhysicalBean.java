@@ -15,6 +15,7 @@ public class MakeAnPhysicalBean {
     private String method;
     private String repcode;
     private String repmsg;
+    private String recordid;
 
     public String getMethod() {
         return method;
@@ -40,12 +41,21 @@ public class MakeAnPhysicalBean {
         this.repmsg = repmsg;
     }
 
+    public String getRecordid() {
+        return recordid;
+    }
+
+    public void setRecordid(String recordid) {
+        this.recordid = recordid;
+    }
+
     @Override
     public String toString() {
         return "MakeAnPhysicalBean{" +
                 "method='" + method + '\'' +
                 ", repcode='" + repcode + '\'' +
                 ", repmsg='" + repmsg + '\'' +
+                ", recordid='" + recordid + '\'' +
                 '}';
     }
 }

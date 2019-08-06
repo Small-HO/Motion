@@ -43,4 +43,5 @@ dependencies {
     //标记
     implementation dependencies.internet.rxjava
     implementation dependencies.internet.gson
+    implementation dependencies.pay.wxpay
 }

@@ -1,5 +1,7 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dataModel.AdwxpayModel;
+import com.shaoyuan.model.dataModel.PayModeModel;
 import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
 import com.shaoyuan.model.dierbanBean.SiteBean;
 import com.shaoyuan.model.dierbanBean.SiteDetailBean;
@@ -411,6 +413,11 @@ public interface ServiceApi {
      */
     @POST("sportplan")
     Observable<HomePageBean> getHomePage(@Body RequestBody requestBody);
+
+
+    /** 支付 */
+    @POST("payment")
+    Observable<AdwxpayModel> getUserPay(@Body RequestBody requestBody);
 
     /**
      *  -----------------------第二版---------------------------

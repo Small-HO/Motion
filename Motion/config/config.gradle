@@ -30,7 +30,9 @@ ext {
             okHttp3Version          : "3.+",
             okHttpInterceptorVersion: "3.7.0",
             bannerVersion           : "1.4.9",
-            glideVersion            : "3.7.0",
+            glideVersion            : "4.+",
+
+            wechatSDKVersion        : "+",
     ]
 
     //  依赖
@@ -78,6 +80,10 @@ ext {
             //  aop
             aop :[
                     aspectj : "org.aspectj:aspectjrt:${depVersion.aspectjVersion}",
-            ]
+            ],
+            //  支付
+            pay : [
+                    wxpay:"com.tencent.mm.opensdk:wechat-sdk-android-with-mta:${depVersion.wechatSDKVersion}"
+            ],
     ]
 }

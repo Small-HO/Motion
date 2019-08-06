@@ -38,5 +38,4 @@
 
     <include android:id="@+id/footer" layout="@layout/ui_home_booking"/>
 
-
 </RelativeLayout>

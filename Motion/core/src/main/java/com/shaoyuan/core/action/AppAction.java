@@ -1,12 +1,7 @@
 package com.shaoyuan.core.action;
 
-import com.shaoyuan.model.BaseModel;
-import com.shaoyuan.model.SmsCode;
-import com.shaoyuan.model.dataModel.CountcontodayModel;
-import com.shaoyuan.model.dataModel.DataReportModel;
-import com.shaoyuan.model.dataModel.OrderModel;
-import com.shaoyuan.model.dataModel.QuestionModel;
-import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dataModel.AdwxpayModel;
+import com.shaoyuan.model.dataModel.PayModeModel;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -192,6 +187,11 @@ public interface AppAction {
 
     //首页
     void homePage(Map<String,Object> params, HttpCallback<HomePageBean> callback);
+
+
+
+    /** 支付模块 */
+    void userPay(Map<String,Object> params, HttpCallback<AdwxpayModel> callback);
 
 
 

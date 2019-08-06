@@ -1,10 +1,10 @@
 package com.shaoyuan.core.persenter;
 
-import android.view.View;
-
+import com.shaoyuan.api.Constants;
 import com.shaoyuan.core.Interfaces.BookingOrderInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;
+import com.shaoyuan.core.utils.SharedPreferencesUtils;
 import com.shaoyuan.model.personalBean.MakeAnPhysicalBean;
 import com.shaoyuan.net.HttpCallback;
 
@@ -32,10 +32,14 @@ public class BookingOrderPresenter implements BookingOrderInterface.presenter {
 
     @Override
     public void submit() {
+        view.showPayDialog();
         action.makeAnPhysical(params(), new HttpCallback<MakeAnPhysicalBean>() {
             @Override
             public void onSuccesss(MakeAnPhysicalBean result) {
                 view.showLog("提交预约订单：" + result.toString());
+                if (result.getRepcode().equals("00")) {
+                    SharedPreferencesUtils.saveString(view.getContext(), Constants.recordid,result.getRecordid());
+                }
             }
 
             @Override
@@ -56,6 +60,8 @@ public class BookingOrderPresenter implements BookingOrderInterface.presenter {
         params.put("phone",view.getPhone());        //  手机号
         params.put("apptime",view.getTime());       //  预约时间
         params.put("remarks",view.getRemark());     //  备注
+        params.put("price",view.getPrice());        //  价格
+        view.showLog("测试参数：" + params);
         return params;
     }
 }

@@ -53,7 +53,7 @@ public class CalendarDialog extends Dialog {
 
 
     public CalendarDialog(Context context) {
-        super(context, R.style.time_dialog);
+        super(context, R.style.alert_dialog);
         this.context = context;
     }
 

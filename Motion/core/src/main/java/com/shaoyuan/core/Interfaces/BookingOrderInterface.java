@@ -23,8 +23,11 @@ public interface BookingOrderInterface {
         String getCard();
         String getSex();
         String getRemark();
+        String getPrice();
 
         void showTimeDialog();
+        void showPayDialog();
+
         void showLog(String log);
         void showToast(String e);
     }

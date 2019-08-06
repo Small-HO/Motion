@@ -30,39 +30,39 @@ public class SitePresenter implements SiteInterface.presenter{
 
     @Override
     public void submit() {
-        appAction.judgeCoach(params(), new HttpCallback<JudgeCoactBean>() {
-            @Override
-            public void onSuccesss(JudgeCoactBean result) {
-                ceshi = result.getPertype();
-                view.showLog("测试教练数据：" + result.toString() + "测试id：" + ceshi);
-                if (result.getRepcode().equals("00")) {
-                    view.initJudgeCoact(result);    //  显示教练
-                }else if (result.getRepcode().equals("01")) {
-                    view.intJudgeCoacts(result);
-                }
-                submits(ceshi);
-                siteScreen(ceshi);
-            }
-        });
+//        appAction.judgeCoach(params(), new HttpCallback<JudgeCoactBean>() {
+//            @Override
+//            public void onSuccesss(JudgeCoactBean result) {
+//                ceshi = result.getPertype();
+//                view.showLog("测试教练数据：" + result.toString() + "测试id：" + ceshi);
+//                if (result.getRepcode().equals("00")) {
+//                    view.initJudgeCoact(result);    //  显示教练
+//                }else if (result.getRepcode().equals("01")) {
+//                    view.intJudgeCoacts(result);
+//                }
+//                submits(ceshi);
+//                siteScreen(ceshi);
+//            }
+//        });
     }
 
 
     private void submits(String perType) {
-        appAction.site(param(perType), new HttpCallback<SiteBean>() {
-            @Override
-            public void onSuccesss(SiteBean result) {
-                view.site(result);
-            }
-        });
+//        appAction.site(param(perType), new HttpCallback<SiteBean>() {
+//            @Override
+//            public void onSuccesss(SiteBean result) {
+//                view.site(result);
+//            }
+//        });
     }
 
     private void siteScreen(String perType) {
-        appAction.siteScreen(map(perType), new HttpCallback<SiteScreenBean>() {
-            @Override
-            public void onSuccesss(SiteScreenBean result) {
-                view.initSiteScreen(result);
-            }
-        });
+//        appAction.siteScreen(map(perType), new HttpCallback<SiteScreenBean>() {
+//            @Override
+//            public void onSuccesss(SiteScreenBean result) {
+//                view.initSiteScreen(result);
+//            }
+//        });
     }
 
     private Map<String, Object> params() {
