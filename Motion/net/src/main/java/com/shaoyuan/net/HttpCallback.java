@@ -14,9 +14,11 @@ public abstract class HttpCallback<T> implements ICallback {
     }
 
     @Override
-    public void onFailure(String e) {
-
+    public void onFailure(String result) {
+        onFailures(result);
     }
 
     public abstract void onSuccesss(T result);
+
+    public abstract void onFailures(String erro);
 }

@@ -10,7 +10,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/header">
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/footer"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +36,7 @@
 
     </ScrollView>
 
-    <include layout="@layout/ui_home_booking"/>
+    <include android:id="@+id/footer" layout="@layout/ui_home_booking"/>
 
 
 </RelativeLayout>

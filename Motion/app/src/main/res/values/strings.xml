@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Motion</string>
 
     <string name="tv_tab_home">首页</string>
@@ -128,4 +128,8 @@
     <string name="tv_authority">权</string>
     <string name="tv_change">改</string>
     <string name="tv_after">后</string>
+
+
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
 </resources>

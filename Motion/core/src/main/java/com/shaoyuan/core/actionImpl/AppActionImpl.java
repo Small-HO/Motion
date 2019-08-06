@@ -8,6 +8,7 @@ import com.shaoyuan.api.L;
 import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
+import com.shaoyuan.core.utils.LogUtils;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -275,9 +276,60 @@ public class AppActionImpl implements AppAction {
 
     }
 
+    /** 预约订单 */
     @Override
-    public void makeAnPhysical(Map<String, Object> params, HttpCallback<MakeAnPhysicalBean> callback) {
+    public void makeAnPhysical(Map<String, Object> params, final HttpCallback<MakeAnPhysicalBean> callback) {
+        //  姓名校验
+        if (TextUtils.isEmpty((String) params.get("username"))) {
+            if (callback != null) {
+                callback.onFailures("请输入姓名");
+            }
+            return;
+        }
+        //  身份证校验
+        if (TextUtils.isEmpty((String) params.get("usercard"))) {
+            if (callback != null) {
+                callback.onFailures("请输入身份证");
+            }
+            return;
+        }
+        //  手机号校验
+        if (TextUtils.isEmpty((String) params.get("phone"))) {
+            if (callback != null) {
+                callback.onFailures("请输入手机号");
+            }
+            return;
+        }
+        //  预约时间校验
+        if (TextUtils.isEmpty((String) params.get("apptime"))) {
+            if (callback != null) {
+                callback.onFailures("请选择预约时间");
+            }
+            return;
+        }
 
+        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), gson.toJson(params));
+        ServiceApiImpl.getInstance().getMakeAnPhysical(requestBody).subscribe(new Observer<MakeAnPhysicalBean>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(MakeAnPhysicalBean bean) {
+                callback.onSuccess(bean);
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
     }
 
     @Override

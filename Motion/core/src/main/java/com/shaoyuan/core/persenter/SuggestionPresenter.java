@@ -36,6 +36,11 @@ public class SuggestionPresenter implements SuggestionInterface.presenter {
                 view.showLog(result.toString());
                 view.initFeedback(result);
             }
+
+            @Override
+            public void onFailures(String erro) {
+
+            }
         });
     }
 

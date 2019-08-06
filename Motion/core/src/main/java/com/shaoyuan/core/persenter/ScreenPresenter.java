@@ -32,6 +32,11 @@ public class ScreenPresenter implements ScreenInreface.presenter {
                     view.initScreenDatas(result);
                 }
             }
+
+            @Override
+            public void onFailures(String erro) {
+
+            }
         });
     }
 

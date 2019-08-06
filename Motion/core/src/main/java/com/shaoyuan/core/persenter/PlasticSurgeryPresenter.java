@@ -35,6 +35,11 @@ public class PlasticSurgeryPresenter implements PlasticSurgeryInterface.presente
                     view.initPlasticSurgeryData(result);        //  显示数据
                 }
             }
+
+            @Override
+            public void onFailures(String erro) {
+
+            }
         });
     }
 
@@ -42,7 +47,6 @@ public class PlasticSurgeryPresenter implements PlasticSurgeryInterface.presente
         Map<String,Object> params = new HashMap<>();
         params.put("method","getexamination");
         params.put("setmealid",view.initInterData());
-        view.showLog("测试参数：" + params);
         return params;
     }
 }

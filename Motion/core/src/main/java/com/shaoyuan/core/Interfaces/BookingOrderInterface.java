@@ -16,7 +16,17 @@ public interface BookingOrderInterface {
 
         void initCommodityData();
 
+        String getID();
+        String getName();
+        String getPhone();
+        String getTime();
+        String getCard();
+        String getSex();
+        String getRemark();
+
+        void showTimeDialog();
         void showLog(String log);
+        void showToast(String e);
     }
 
     interface presenter {

@@ -46,6 +46,7 @@
             />
 
         <EditText
+            android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -77,6 +78,7 @@
             />
 
         <EditText
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -107,17 +109,24 @@
             android:textColor="@color/colorGradeData"
             />
 
-        <EditText
+        <TextView
+            android:id="@+id/tv_time"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
             android:hint="请选择预约时间"
-            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
             android:background="@null"
             android:textSize="@dimen/sp_13"
             android:layout_marginStart="@dimen/dp_80"
             />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/calendar"
+            android:layout_centerInParent="true"
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -138,7 +147,8 @@
             android:textColor="@color/colorGradeData"
             />
 
-        <TextView
+        <EditText
+            android:id="@+id/tv_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
@@ -147,13 +157,6 @@
             android:background="@null"
             android:textSize="@dimen/sp_13"
             android:layout_marginStart="@dimen/dp_80"
-            />
-        
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/calendar"
-            android:layout_centerInParent="true"
             />
 
     </RelativeLayout>
@@ -220,6 +223,7 @@
             />
 
         <EditText
+            android:id="@+id/et_hint"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 

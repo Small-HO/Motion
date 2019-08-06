@@ -26,6 +26,7 @@ import com.shaoyuan.motion.utils.ImageLoader;
 import butterknife.BindView;
 import butterknife.OnClick;
 
+@SuppressLint("SetTextI18n")
 public class PlasticSurgeryActivity extends BaseActivity implements PlasticSurgeryInterface.view {
     private static final String Tag = "PlasticSurgeryActivity";
     private PlasticSurgeryPresenter presenter;
@@ -53,6 +54,7 @@ public class PlasticSurgeryActivity extends BaseActivity implements PlasticSurge
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        startload();
         initView();
         initData();
     }
@@ -94,7 +96,6 @@ public class PlasticSurgeryActivity extends BaseActivity implements PlasticSurge
         return getIntent().getStringExtra("setmealid");
     }
 
-    @SuppressLint("SetTextI18n")
     @Override
     public void initPlasticSurgeryData(PhysicalDetailsBean bean) {
         this.bean = bean;
@@ -125,11 +126,14 @@ public class PlasticSurgeryActivity extends BaseActivity implements PlasticSurge
         mPriceCurrent.setText("￥" + bean.getSetmealprice());        //  结算现价
         mEalprices.setText("￥" + bean.getSetmealprices());          //  结算原价
         mEalprices.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
+
+        stopload();
     }
 
     @Override
     public void toOrderPage() {
         startActivity(new Intent(this,BookingOrderActivity.class)
+                .putExtra("setmealid",initInterData())
                 .putExtra("pic",bean.getExhpic())
                 .putExtra("setmealname",bean.getSetmealname())
                 .putExtra("mechname",bean.getMechname())
