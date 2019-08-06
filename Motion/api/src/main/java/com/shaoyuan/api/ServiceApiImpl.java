@@ -1,5 +1,7 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dierbanBean.CoachBean;
+import com.shaoyuan.model.dierbanBean.CoachDetailBean;
 import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
 import com.shaoyuan.model.dierbanBean.SiteBean;
 import com.shaoyuan.model.dierbanBean.SiteDetailBean;
@@ -498,6 +500,22 @@ public class ServiceApiImpl implements ServiceApi {
     public Observable<SiteDetailBean> getSiteDetail(RequestBody requestBody) {
         return getFixApid()
                 .getSiteDetail(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<CoachDetailBean> getCoachDetail(RequestBody requestBody) {
+        return getFixApid()
+                .getCoachDetail(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<CoachBean> getCoach(RequestBody requestBody) {
+        return getFixApid()
+                .getCoach(requestBody)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
     }

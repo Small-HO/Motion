@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by gzl on 2019/8/1 15:32
- * title：
+ * title：场馆分类适配器
  */
 public class ClassifyPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
     Context context;
@@ -33,8 +33,8 @@ public class ClassifyPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
         TextView tv_pop_title = holder.getItemView(R.id.tv_pop_title);
         TextView tv_pop_xian = holder.getItemView(R.id.tv_pop_xian);
         TextView tv_pop_dui = holder.getItemView(R.id.tv_pop_dui);
-
-        tv_pop_title.setText(bean.getClassify().get(position));
+        String s = bean.getClassify().get(position);
+        tv_pop_title.setText(s);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

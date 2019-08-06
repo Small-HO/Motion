@@ -17,6 +17,7 @@
         android:background="@color/white"
         android:orientation="horizontal">
         <LinearLayout
+            android:id="@+id/line_area"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
@@ -33,6 +34,7 @@
             />
             <ImageView
                 android:id="@+id/img_one"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_2"
@@ -40,6 +42,7 @@
                 android:background="@mipmap/xia"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/line_venue"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -57,11 +60,13 @@
                 android:id="@+id/img_two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_marginLeft="@dimen/dp_2"
                 android:layout_gravity="center_vertical"
                 android:background="@mipmap/xia"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/line_price"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -80,10 +85,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_2"
+                android:visibility="gone"
                 android:layout_gravity="center_vertical"
                 android:background="@mipmap/xia"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ling_distance"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -101,6 +108,7 @@
                 android:id="@+id/img_for"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_marginLeft="@dimen/dp_2"
                 android:layout_gravity="center_vertical"
                 android:background="@mipmap/xia"/>

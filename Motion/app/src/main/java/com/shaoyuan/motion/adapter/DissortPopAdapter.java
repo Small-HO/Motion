@@ -32,8 +32,6 @@ public class DissortPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
     protected void onBindViewHolder(RecyclerViewHolder holder, SiteScreenBean bean, int position) {
 
         TextView tv_pop_title = holder.getItemView(R.id.tv_pop_title);
-        TextView tv_pop_xian = holder.getItemView(R.id.tv_pop_xian);
-        TextView tv_pop_dui = holder.getItemView(R.id.tv_pop_dui);
 
         tv_pop_title.setText(bean.getDissort().get(position));
 

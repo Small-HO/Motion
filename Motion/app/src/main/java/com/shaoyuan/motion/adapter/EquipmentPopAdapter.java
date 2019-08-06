@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by gzl on 2019/8/1 15:38
- * title：
+ * title：器械筛选适配器
  */
 public class EquipmentPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
 
@@ -34,8 +34,8 @@ public class EquipmentPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
         TextView tv_pop_title = holder.getItemView(R.id.tv_pop_title);
         TextView tv_pop_xian = holder.getItemView(R.id.tv_pop_xian);
         TextView tv_pop_dui = holder.getItemView(R.id.tv_pop_dui);
-
-        tv_pop_title.setText(bean.getEquipment().get(position));
+        String s = bean.getEquipment().get(position);
+        tv_pop_title.setText(s);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

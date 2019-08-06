@@ -7,6 +7,7 @@
         android:id="@+id/tv_current_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="￥162"
         android:textColor="@color/colorOrderStart"
         android:textSize="@dimen/sp_25"
         android:padding="@dimen/dp_10"
@@ -35,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_8"
+            android:text="¥980.5"
             android:textColor="#ff999999"
             android:textSize="13sp" />
 

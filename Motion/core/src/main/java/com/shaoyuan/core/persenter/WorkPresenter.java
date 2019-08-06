@@ -3,8 +3,6 @@ package com.shaoyuan.core.persenter;
 import com.shaoyuan.core.Interfaces.WorkInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;
-import com.shaoyuan.model.dataModel.WorkModel;
-import com.shaoyuan.net.HttpCallback;
 
 import java.util.Map;
 
@@ -23,7 +21,7 @@ public class WorkPresenter implements WorkInterface.presenter {
 
     @Override
     public void initClassItem() {
-        action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
+       /* action.addWorkConsume(classItemParams(), new HttpCallback<WorkModel>() {
             @Override
             public void onSuccess(WorkModel model) {
                 view.showLog("添加工作左侧分类数据：" + model.toString());
@@ -33,13 +31,13 @@ public class WorkPresenter implements WorkInterface.presenter {
             @Override
             public void onFailure(String e) {
 
-            }
-        });
+            }*/
+       // });
     }
 
     @Override
     public void initContextItem() {
-        action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
+        /*action.addWorkConsume(contextItemParams(), new HttpCallback<WorkModel>() {
             @Override
             public void onSuccess(WorkModel model) {
                 view.showLog("添加工作右侧详情数据：" + model);
@@ -50,7 +48,7 @@ public class WorkPresenter implements WorkInterface.presenter {
             public void onFailure(String e) {
 
             }
-        });
+        });*/
     }
 
     private Map<String, Object> contextItemParams() {

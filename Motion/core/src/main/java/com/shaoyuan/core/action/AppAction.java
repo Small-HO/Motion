@@ -1,12 +1,11 @@
 package com.shaoyuan.core.action;
 
-import com.shaoyuan.model.BaseModel;
-import com.shaoyuan.model.SmsCode;
-import com.shaoyuan.model.dataModel.CountcontodayModel;
-import com.shaoyuan.model.dataModel.DataReportModel;
-import com.shaoyuan.model.dataModel.OrderModel;
-import com.shaoyuan.model.dataModel.QuestionModel;
-import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dierbanBean.CoachBean;
+import com.shaoyuan.model.dierbanBean.CoachDetailBean;
+import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
+import com.shaoyuan.model.dierbanBean.SiteBean;
+import com.shaoyuan.model.dierbanBean.SiteDetailBean;
+import com.shaoyuan.model.dierbanBean.SiteScreenBean;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -193,32 +192,25 @@ public interface AppAction {
     //首页
     void homePage(Map<String,Object> params, HttpCallback<HomePageBean> callback);
 
+    /**
+     *  ----------------------------第二版----------------------------
+     */
 
+    //判断是不是教练
+    void judgeCoach(Map<String,Object> params, HttpCallback<JudgeCoactBean> callback);
 
-//    void login(Map<String,Object> params, HttpCallback<> callback);
-   /* //  发送验证码
-    void sendSmsCode(Map<String,Object> params, HttpCallback<SmsCode> callback);
+    //场地预约列表
+    void site(Map<String,Object> params, HttpCallback<SiteBean> callback);
 
-    //  订单列表
-    void orderInfo(Map<String,Object> params, HttpCallback<OrderModel> callback);
+    //场地预约筛选条件
+    void siteScreen(Map<String,Object> params, HttpCallback<SiteScreenBean> callback);
 
-    //  用户基本信息
-    void userInfo(Map<String,Object> params, HttpCallback<UserInfoModel> callback);
-    //  保存用户信息
-    void userInfoSave(Map<String,Object> params, HttpCallback<BaseModel> callback);
+    //场馆详情介绍-用户
+    void siteDetail(Map<String,Object> params, HttpCallback<SiteDetailBean> callback);
 
-    //  修改密码
-    void updatePas(Map<String,Object> params,HttpCallback<BaseModel> callback);
+    //教练预约详情
+    void coachDetail(Map<String,Object> params, HttpCallback<CoachDetailBean> callback);
 
-    //  常见问题
-    void questions(Map<String,Object> params, HttpCallback<QuestionModel> callback);
-
-    //  提交意见反馈信息
-    void suggestionSubmit(Map<String,Object> params,HttpCallback<BaseModel> callback);
-
-    //  消耗摄入
-    void countconTody(Map<String,Object> params, HttpCallback<CountcontodayModel> callback);
-
-    //  报告分析
-    void reportsAnalyses(Map<String,Object> params, HttpCallback<DataReportModel> callback);*/
+    //教练列表
+    void coach(Map<String,Object> params, HttpCallback<CoachBean> callback);
 }

@@ -28,7 +28,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':model')
-
     def dependencies = rootProject.ext.deps
     implementation dependencies.internet.gson
     implementation dependencies.internet.rxjava

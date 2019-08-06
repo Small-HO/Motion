@@ -1,5 +1,7 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dierbanBean.CoachBean;
+import com.shaoyuan.model.dierbanBean.CoachDetailBean;
 import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
 import com.shaoyuan.model.dierbanBean.SiteBean;
 import com.shaoyuan.model.dierbanBean.SiteDetailBean;
@@ -449,4 +451,19 @@ public interface ServiceApi {
     @POST("sportplan")
     Observable<SiteDetailBean> getSiteDetail(@Body RequestBody requestBody);
 
+    /**
+     * 教练预约详情
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<CoachDetailBean> getCoachDetail(@Body RequestBody requestBody);
+
+    /**
+     * 教练列表
+     * @param requestBody
+     * @return
+     */
+    @POST("sportplan")
+    Observable<CoachBean> getCoach(@Body RequestBody requestBody);
 }

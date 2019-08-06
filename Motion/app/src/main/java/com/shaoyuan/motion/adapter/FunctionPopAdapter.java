@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by gzl on 2019/8/1 15:36
- * title：
+ * title：功能筛选
  */
 public class FunctionPopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
 

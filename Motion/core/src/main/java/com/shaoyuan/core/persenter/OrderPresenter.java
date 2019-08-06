@@ -3,8 +3,6 @@ package com.shaoyuan.core.persenter;
 import com.shaoyuan.core.Interfaces.OrderInterface;
 import com.shaoyuan.core.action.AppAction;
 import com.shaoyuan.core.actionImpl.AppActionImpl;
-import com.shaoyuan.model.dataModel.OrderModel;
-import com.shaoyuan.net.HttpCallback;
 
 import java.util.Map;
 
@@ -28,7 +26,6 @@ public class OrderPresenter implements OrderInterface.presenter {
             public void onSuccess(OrderModel model) {
                 view.showLog("订单列表请求状态：" + model.getOrderInfos().toString());
                 view.initOrderDatas(model);
-
             }
 
             @Override

@@ -39,13 +39,4 @@ public class MakeAnPhysicalBean {
     public void setRepmsg(String repmsg) {
         this.repmsg = repmsg;
     }
-
-    @Override
-    public String toString() {
-        return "MakeAnPhysicalBean{" +
-                "method='" + method + '\'' +
-                ", repcode='" + repcode + '\'' +
-                ", repmsg='" + repmsg + '\'' +
-                '}';
-    }
 }

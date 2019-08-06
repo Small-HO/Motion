@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * Created by gzl on 2019/8/1 10:25
- * title：
+ * title：区域筛选适配器
  */
 public class AreaPopAdapter extends BaseRecyclerAdapter<SiteScreenBean>{
     Context context;

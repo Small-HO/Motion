@@ -34,7 +34,7 @@ public class SitePresenter implements SiteInterface.presenter{
             @Override
             public void onSuccesss(JudgeCoactBean result) {
                 ceshi = result.getPertype();
-                view.showLog("测试教练数据：" + result.toString() + "测试id：" + ceshi);
+                //view.showLog("测试教练数据：" + result.toString() + "测试id：" + ceshi);
                 if (result.getRepcode().equals("00")) {
                     view.initJudgeCoact(result);    //  显示教练
                 }else if (result.getRepcode().equals("01")) {

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.CoachDetailActivity">
+    >
     <include layout="@layout/ui_title_back"/>
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp">
@@ -18,6 +18,6 @@
             <include layout="@layout/coach_detail_one"/>
             <include layout="@layout/coach_detail_two"/>
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

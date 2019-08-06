@@ -37,7 +37,7 @@
 
         <!-- 现价 -->
         <TextView
-            android:id="@+id/tv_item_current_price"
+            android:id="@+id/tv_current_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -53,7 +53,7 @@
 
             android:layout_marginStart="@dimen/dp_10"
             android:layout_alignBottom="@+id/iv_image"
-            android:layout_toEndOf="@+id/tv_item_current_price"
+            android:layout_toEndOf="@+id/tv_current_price"
             />
 
     </RelativeLayout>

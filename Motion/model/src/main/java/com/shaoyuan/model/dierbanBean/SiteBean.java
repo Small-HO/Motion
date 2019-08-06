@@ -70,6 +70,15 @@ public class SiteBean {
         private String lng;
         private String lat;
         private String price;
+        private String areaid;
+
+        public String getAreaid() {
+            return areaid;
+        }
+
+        public void setAreaid(String areaid) {
+            this.areaid = areaid;
+        }
 
         public String getMachid() {
             return machid;

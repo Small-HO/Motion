@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * Created by gzl on 2019/8/1 15:34
- * title：
+ * title：用户价钱筛选
  */
 public class PricePopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
     Context context;
@@ -31,8 +31,6 @@ public class PricePopAdapter extends BaseRecyclerAdapter<SiteScreenBean> {
     @Override
     protected void onBindViewHolder(RecyclerViewHolder holder, SiteScreenBean bean, int position) {
         TextView tv_pop_title = holder.getItemView(R.id.tv_pop_title);
-        TextView tv_pop_xian = holder.getItemView(R.id.tv_pop_xian);
-        TextView tv_pop_dui = holder.getItemView(R.id.tv_pop_dui);
 
         tv_pop_title.setText(bean.getPrice().get(position));
 

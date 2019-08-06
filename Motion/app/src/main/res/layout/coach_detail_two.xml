@@ -29,6 +29,7 @@
                 android:textSize="@dimen/sp_12"
                 android:text="区域"/>
             <TextView
+                android:id="@+id/tv_coach_detail_region"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_12"
@@ -47,6 +48,7 @@
                 android:textSize="@dimen/sp_12"
                 android:text="距离"/>
             <TextView
+                android:id="@+id/tv_coach_detail_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/sp_12"
@@ -65,6 +67,7 @@
                 android:textSize="@dimen/sp_12"
                 android:text="名称"/>
             <TextView
+                android:id="@+id/tv_coach_detail_machname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_10"
@@ -90,6 +93,7 @@
             android:drawablePadding="@dimen/dp_5"
             android:drawableLeft="@mipmap/lan"/>
         <TextView
+            android:id="@+id/tv_coach_detail_equpro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="游泳圈（免费）"
@@ -97,5 +101,44 @@
             android:textSize="@dimen/sp_12"
             android:layout_marginTop="@dimen/dp_10"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_150"
+        android:background="@mipmap/white_er"
+        android:layout_marginTop="@dimen/dp_10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_85"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预约规则"
+            android:drawablePadding="@dimen/dp_5"
+            android:drawableLeft="@mipmap/lan"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/black"
+            android:text="截止到开课,每天晚上24:00，过后取消或者更改场地费不退还"
+            />
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_coach_detail_mack"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:background="@mipmap/lan_bt"
+            android:textColor="@color/white"
+            android:text="预约"
+            android:textSize="@dimen/sp_16"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 
 </LinearLayout>

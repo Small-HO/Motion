@@ -14,7 +14,7 @@ public class Constants {
     //public static final String HTTP_URL = "http://192.168.1.148:8889/";//    本地服务器
     //public static final String HTTP_URL = "http://59.111.58.155:8889/";//测试服务器
     public static final String HTTP_URL = "http://192.168.1.166:8889/";
-    //    public static final String HTTP_URL = "http://192.168.1.142:8889/";
+    //public static final String HTTP_URL = "http://192.168.1.143:8889/";
     public static final String USER_ID = "userid";
     public static final String ACCOUNT = "account";
     public static final String TOKEN = "token";

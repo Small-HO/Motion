@@ -12,13 +12,9 @@ import com.shaoyuan.core.Interfaces.ScreenInreface;
 import com.shaoyuan.core.persenter.ScreenPresenter;
 import com.shaoyuan.core.utils.LogUtils;
 import com.shaoyuan.model.dataModel.ScreenModel;
-import com.shaoyuan.model.personalBean.PhysicalListBean;
 import com.shaoyuan.motion.BaseActivity;
 import com.shaoyuan.motion.R;
 import com.shaoyuan.motion.adapter.ScreenAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -29,9 +25,6 @@ public class MedicalActivity extends BaseActivity implements ScreenInreface.view
 
     @BindView(R.id.tv_back_title)TextView mTitle;
     @BindView(R.id.recycler_view)RecyclerView mItem;
-
-    private List<PhysicalListBean.PhysicallistBean> list = new ArrayList<>();
-    private int postion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,15 +67,16 @@ public class MedicalActivity extends BaseActivity implements ScreenInreface.view
     }
 
     @Override
-    public void initScreenDatas(PhysicalListBean model) {
-        list = model.getPhysicallist();
+    public void initScreenDatas(ScreenModel model) {
         mItem.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        ScreenAdapter adapter = new ScreenAdapter(this, model.getPhysicallist());
+        ScreenAdapter adapter = new ScreenAdapter(this, model.getList());
 
         mItem.setAdapter(adapter);
-        adapter.setOnItemClickListener(position -> {
-            postion = position;
-            toPlasticPage();
+        adapter.setOnItemClickListener(new ScreenAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                toPlasticPage();
+            }
         });
     }
 
@@ -93,8 +87,7 @@ public class MedicalActivity extends BaseActivity implements ScreenInreface.view
 
     @Override
     public void toPlasticPage() {
-        String setmealid = list.get(postion).getSetmealid();
-        startActivity(new Intent(this,PlasticSurgeryActivity.class).putExtra("setmealid",setmealid));
+        startActivity(new Intent(this,PlasticSurgeryActivity.class));
     }
 
     @Override

@@ -2,7 +2,7 @@ package com.shaoyuan.core.Interfaces;
 
 import android.content.Context;
 
-import com.shaoyuan.model.personalBean.PhysicalListBean;
+import com.shaoyuan.model.dataModel.ScreenModel;
 
 /**
  * Created by small-ho on 2019/7/29 9:31
@@ -16,10 +16,10 @@ public interface ScreenInreface {
         void initView();
         void initData();
 
-        void initScreenDatas(PhysicalListBean model);
+        void initScreenDatas(ScreenModel model);
 
         void toScreenPage();
-        void toPlasticPage();           //  体检详情
+        void toPlasticPage();
 
         void showLog(String log);
     }
