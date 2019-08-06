@@ -62,25 +62,4 @@
         <attr name="gradient_end_color" format="color" />
         <attr name="tick_normal_color" format="color" />
     </declare-styleable>
-
-    <style name="time_dialog" parent="android:Theme.Dialog">
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">false</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">false</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowAnimationStyle">@null</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.4</item>
-    </style>
-
-    <!-- Navigation Header -->
-    <style name="NavPage">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:orientation">vertical</item>
-        <item name="android:gravity">center_horizontal</item>
-        <!-- <item name="android:background">@drawable/nav_page</item> -->
-        <item name="android:background">#FFE1E8EB</item>
-    </style>
 </resources>

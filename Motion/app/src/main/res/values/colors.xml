@@ -11,10 +11,10 @@
     <color name="text_green">#20C7BF</color>
 
     <color name="colorSex">#B9B9B9</color>
-
+    <color name="white">#ffffff</color>
     <color name="colorLineGreen">#20C7BF</color>
     <color name="colorMineText">#ff666666</color>
-
+    <color name="black">#000000</color>
     <color name="colorLoding">#f0f0f0</color>
     <color name="colorDalogBlack">#80000000</color>
 
@@ -32,9 +32,9 @@
     <color name="colorQk">#fffa2b4c</color>             <!-- 千卡 -->
     <color name="colorSearch">#fff5f5f5</color>         <!-- 搜索框背景 -->
 
-
+    <color name="colorKuang">#3ABFBB</color>
 
     <color name="line_bg_green">#21C7C0</color>
 
-
+    <color name="red">#FF0000</color>
 </resources>

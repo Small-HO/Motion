@@ -57,10 +57,7 @@ dependencies {
     implementation dependencies.utils.butterknife
     implementation dependencies.other.banner
     implementation dependencies.other.glide
-    implementation dependencies.pay.wxpay
-
     implementation 'com.android.support:multidex:1.0.3'
-    implementation 'com.classic.adapter:commonadapter:2.0'
 
 
 }

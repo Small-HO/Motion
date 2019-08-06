@@ -1,5 +1,9 @@
 package com.shaoyuan.api;
 
+import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
+import com.shaoyuan.model.dierbanBean.SiteBean;
+import com.shaoyuan.model.dierbanBean.SiteDetailBean;
+import com.shaoyuan.model.dierbanBean.SiteScreenBean;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -81,7 +85,7 @@ public class ServiceApiImpl implements ServiceApi {
         mOkClient = builder.build();
 
         mRetrofit = new Retrofit.Builder()
-                .baseUrl(HttpUrl)
+                .baseUrl(Constants.HTTP_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(mOkClient)
@@ -458,6 +462,42 @@ public class ServiceApiImpl implements ServiceApi {
     public Observable<HomePageBean> getHomePage(RequestBody requestBody) {
         return getFixApid()
                 .getHomePage(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    /**
+     *--------------------------第二版--------------------------------
+     */
+
+    @Override
+    public Observable<JudgeCoactBean> getJudgeCoach(RequestBody requestBody) {
+        return getFixApid()
+                .getJudgeCoach(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SiteBean> getSite(RequestBody requestBody) {
+        return getFixApid()
+                .getSite(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SiteScreenBean> getSiteScreen(RequestBody requestBody) {
+        return getFixApid()
+                .getSiteScreen(requestBody)
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread());
+    }
+
+    @Override
+    public Observable<SiteDetailBean> getSiteDetail(RequestBody requestBody) {
+        return getFixApid()
+                .getSiteDetail(requestBody)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
     }

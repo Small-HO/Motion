@@ -1,14 +1,25 @@
 package com.shaoyuan.core.actionImpl;
 
 import android.content.Context;
-import android.text.TextUtils;
 
-import com.google.gson.Gson;
-import com.shaoyuan.api.L;
 import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
-import com.shaoyuan.core.utils.LogUtils;
+import com.shaoyuan.model.BaseModel;
+import com.shaoyuan.model.SmsCode;
+import com.shaoyuan.model.dataInfo.DataReportInfo;
+import com.shaoyuan.model.dataInfo.IllnessInfo;
+import com.shaoyuan.model.dataInfo.OrderInfo;
+import com.shaoyuan.model.dataInfo.QuestionInfo;
+import com.shaoyuan.model.dataInfo.WorkInfo;
+import com.shaoyuan.model.dataModel.CountcontodayModel;
+import com.shaoyuan.model.dataModel.DataReportModel;
+import com.shaoyuan.model.dataModel.IllnessModel;
+import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.QuestionModel;
+import com.shaoyuan.model.dataModel.ScreenModel;
+import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -54,13 +65,11 @@ import com.shaoyuan.model.personalBean.UpPasswordBean;
 import com.shaoyuan.model.personalBean.UpdateDataBean;
 import com.shaoyuan.model.personalBean.VerificationCodeBean;
 import com.shaoyuan.net.HttpCallback;
+import com.shaoyuan.net.HttpHelper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 
 /**
  * Created by small-ho on 2019/7/2 13:45
@@ -71,11 +80,11 @@ public class AppActionImpl implements AppAction {
     private final static int PAGE_SIZE = 20;    //  默认每页20条
 
     private Context context;
-    private Gson gson;
+    private ServiceApi api;
 
     public AppActionImpl(Context context){
         this.context = context;
-        gson = new Gson();
+        //this.api = new ServiceApiImpl();
     }
 
     @Override
@@ -134,56 +143,13 @@ public class AppActionImpl implements AppAction {
     }
 
     @Override
-    public void physicalList(Map<String, Object> params, final HttpCallback<PhysicalListBean> callback) {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), gson.toJson(params));
-        ServiceApiImpl.getInstance().getPhysicalList(requestBody).subscribe(new Observer<PhysicalListBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void physicalList(Map<String, Object> params, HttpCallback<PhysicalListBean> callback) {
 
-            }
-
-            @Override
-            public void onNext(PhysicalListBean physicalListBean) {
-                callback.onSuccess(physicalListBean);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
     }
 
-    /** 体检详情 */
     @Override
-    public void physicalDetails(Map<String, Object> params, final HttpCallback<PhysicalDetailsBean> callback) {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), gson.toJson(params));
-        ServiceApiImpl.getInstance().getPhysicalDetails(requestBody).subscribe(new Observer<PhysicalDetailsBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void physicalDetails(Map<String, Object> params, HttpCallback<PhysicalDetailsBean> callback) {
 
-            }
-
-            @Override
-            public void onNext(PhysicalDetailsBean bean) {
-                callback.onSuccess(bean);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
     }
 
     @Override
@@ -276,60 +242,9 @@ public class AppActionImpl implements AppAction {
 
     }
 
-    /** 预约订单 */
     @Override
-    public void makeAnPhysical(Map<String, Object> params, final HttpCallback<MakeAnPhysicalBean> callback) {
-        //  姓名校验
-        if (TextUtils.isEmpty((String) params.get("username"))) {
-            if (callback != null) {
-                callback.onFailures("请输入姓名");
-            }
-            return;
-        }
-        //  身份证校验
-        if (TextUtils.isEmpty((String) params.get("usercard"))) {
-            if (callback != null) {
-                callback.onFailures("请输入身份证");
-            }
-            return;
-        }
-        //  手机号校验
-        if (TextUtils.isEmpty((String) params.get("phone"))) {
-            if (callback != null) {
-                callback.onFailures("请输入手机号");
-            }
-            return;
-        }
-        //  预约时间校验
-        if (TextUtils.isEmpty((String) params.get("apptime"))) {
-            if (callback != null) {
-                callback.onFailures("请选择预约时间");
-            }
-            return;
-        }
+    public void makeAnPhysical(Map<String, Object> params, HttpCallback<MakeAnPhysicalBean> callback) {
 
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), gson.toJson(params));
-        ServiceApiImpl.getInstance().getMakeAnPhysical(requestBody).subscribe(new Observer<MakeAnPhysicalBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(MakeAnPhysicalBean bean) {
-                callback.onSuccess(bean);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
     }
 
     @Override
