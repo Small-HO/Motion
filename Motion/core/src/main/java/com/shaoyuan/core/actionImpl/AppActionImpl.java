@@ -2,16 +2,24 @@ package com.shaoyuan.core.actionImpl;
 
 import android.content.Context;
 
-import com.google.gson.Gson;
 import com.shaoyuan.api.ServiceApi;
 import com.shaoyuan.api.ServiceApiImpl;
 import com.shaoyuan.core.action.AppAction;
-import com.shaoyuan.model.dierbanBean.CoachBean;
-import com.shaoyuan.model.dierbanBean.CoachDetailBean;
-import com.shaoyuan.model.dierbanBean.JudgeCoactBean;
-import com.shaoyuan.model.dierbanBean.SiteBean;
-import com.shaoyuan.model.dierbanBean.SiteDetailBean;
-import com.shaoyuan.model.dierbanBean.SiteScreenBean;
+import com.shaoyuan.model.BaseModel;
+import com.shaoyuan.model.SmsCode;
+import com.shaoyuan.model.dataInfo.DataReportInfo;
+import com.shaoyuan.model.dataInfo.IllnessInfo;
+import com.shaoyuan.model.dataInfo.OrderInfo;
+import com.shaoyuan.model.dataInfo.QuestionInfo;
+import com.shaoyuan.model.dataInfo.WorkInfo;
+import com.shaoyuan.model.dataModel.CountcontodayModel;
+import com.shaoyuan.model.dataModel.DataReportModel;
+import com.shaoyuan.model.dataModel.IllnessModel;
+import com.shaoyuan.model.dataModel.OrderModel;
+import com.shaoyuan.model.dataModel.QuestionModel;
+import com.shaoyuan.model.dataModel.ScreenModel;
+import com.shaoyuan.model.dataModel.UserInfoModel;
+import com.shaoyuan.model.dataModel.WorkModel;
 import com.shaoyuan.model.healthdataBean.ADIMessageBean;
 import com.shaoyuan.model.healthdataBean.ConsumeHealthyDataBean;
 import com.shaoyuan.model.healthdataBean.ConsumeTypeBean;
@@ -57,13 +65,11 @@ import com.shaoyuan.model.personalBean.UpPasswordBean;
 import com.shaoyuan.model.personalBean.UpdateDataBean;
 import com.shaoyuan.model.personalBean.VerificationCodeBean;
 import com.shaoyuan.net.HttpCallback;
+import com.shaoyuan.net.HttpHelper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-
-import io.reactivex.Observer;
-import io.reactivex.disposables.Disposable;
-import okhttp3.MediaType;
-import okhttp3.RequestBody;
 
 /**
  * Created by small-ho on 2019/7/2 13:45
@@ -127,31 +133,8 @@ public class AppActionImpl implements AppAction {
     }
 
     @Override
-    public void feedback(Map<String, Object> params, final HttpCallback<FeedbackBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getFeedback(requestBody).subscribe(new Observer<FeedbackBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void feedback(Map<String, Object> params, HttpCallback<FeedbackBean> callback) {
 
-            }
-
-            @Override
-            public void onNext(FeedbackBean feedbackBean) {
-                callback.onSuccess(feedbackBean);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
     }
 
     @Override
@@ -301,7 +284,7 @@ public class AppActionImpl implements AppAction {
 
     @Override
     public void equipmentBooking(Map<String, Object> params, HttpCallback<EquipmentBookingBean> callback) {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), params.toString());
+
     }
 
     @Override
@@ -324,189 +307,191 @@ public class AppActionImpl implements AppAction {
 
     }
 
-    /**
-     *----------------------------第二版-------------------------------
-     */
+    /*@Override
+    public void sendSmsCode(Map<String, Object> params, final HttpCallback<SmsCode> callback) {
+        //  参数为空检查
+        if (params == null && params.isEmpty()) {
+            if (callback != null) {
+                callback.onFailure("参数为空");
+            }
+            return;
+        }
+        if (params.get("telno") == null && params.get("telno").equals("")) {
+            if (callback != null) {
+                callback.onFailure("手机号为空");
+            }
+            return;
+        }
 
-    @Override
-    public void judgeCoach(Map<String, Object> params, final HttpCallback<JudgeCoactBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getJudgeCoach(requestBody).subscribe(new Observer<JudgeCoactBean>() {
+        //  手机号校验
+
+        //  网络请求
+        HttpHelper.getInstance().post(api.personal("personal"), params, new HttpCallback<SmsCode>() {
             @Override
-            public void onSubscribe(Disposable d) {
+            public void onFailure(String e) {
 
             }
 
             @Override
-            public void onNext(JudgeCoactBean judgeCoactBean) {
-                if(judgeCoactBean!=null){
-                    callback.onSuccess(judgeCoactBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
+            public void onSuccess(SmsCode smsCode) {
+                callback.onSuccess(smsCode.toString());
             }
         });
     }
 
     @Override
-    public void site(Map<String, Object> params, final HttpCallback<SiteBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getSite(requestBody).subscribe(new Observer<SiteBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void orderInfo(Map<String, Object> params, HttpCallback<OrderModel> callback) {
+        //  模拟数据
+        OrderModel model = new OrderModel();
+        List<OrderInfo> list = new ArrayList<>();
+        OrderInfo info = new OrderInfo();
+        info.setTemstype("场地");
+        info.setSetmealprice("0.01");
+        info.setPaystate(false);
+        info.setCreattime("2019-07-15 09:13:57");
+        info.setMechname("团操室");
+        list.add(info);
+        model.setOrderInfos(list);
 
-            }
-
-            @Override
-            public void onNext(SiteBean siteBean) {
-                if(siteBean!=null){
-                    callback.onSuccess(siteBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
+        callback.onSuccess(model);
     }
 
     @Override
-    public void siteScreen(Map<String, Object> params, final HttpCallback<SiteScreenBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getSiteScreen(requestBody).subscribe(new Observer<SiteScreenBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void userInfo(Map<String, Object> params, HttpCallback<UserInfoModel> callback) {
+        //  模拟数据
+        UserInfoModel model = new UserInfoModel();
+        model.setNickname("小油瓶");
+        model.setSex("女");
+        model.setBirthdate("2019");
+        model.setHeight("1.8");
+        model.setWeight("145");
 
-            }
-
-            @Override
-            public void onNext(SiteScreenBean siteScreenBean) {
-                if(siteScreenBean!=null){
-                    callback.onSuccess(siteScreenBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-    }
-
-
-    @Override
-    public void siteDetail(Map<String, Object> params, final HttpCallback<SiteDetailBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getSiteDetail(requestBody).subscribe(new Observer<SiteDetailBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(SiteDetailBean siteDetailBean) {
-                if(siteDetailBean!=null){
-                    callback.onSuccess(siteDetailBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
+        callback.onSuccess(model);
     }
 
     @Override
-    public void coachDetail(Map<String, Object> params, final HttpCallback<CoachDetailBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getCoachDetail(requestBody).subscribe(new Observer<CoachDetailBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void userInfoSave(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
 
-            }
-
-            @Override
-            public void onNext(CoachDetailBean coachDetailBean) {
-                if(coachDetailBean!=null){
-                    callback.onSuccess(coachDetailBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
+        callback.onSuccess(model);
     }
 
     @Override
-    public void coach(Map<String, Object> params, final HttpCallback<CoachBean> callback) {
-        Gson gson=new Gson();
-        String s = gson.toJson(params);
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), s);
-        ServiceApiImpl.getInstance().getCoach(requestBody).subscribe(new Observer<CoachBean>() {
-            @Override
-            public void onSubscribe(Disposable d) {
+    public void updatePas(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
 
-            }
-
-            @Override
-            public void onNext(CoachBean coachBean) {
-                if(coachBean!=null){
-                    callback.onSuccess(coachBean);
-                }
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
+        callback.onSuccess(model);
     }
 
+    @Override
+    public void questions(Map<String, Object> params, HttpCallback<QuestionModel> callback) {
+        //  模拟数据
+        QuestionModel model = new QuestionModel();
+        List<QuestionInfo> list = new ArrayList<>();
+        QuestionInfo info = new QuestionInfo();
+
+        info.setComname("测试标题数据");
+        info.setSpoexpain("测试标题文本");
+        list.add(info);
+        model.setInfos(list);
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void suggestionSubmit(Map<String, Object> params, HttpCallback<BaseModel> callback) {
+        //  模拟数据
+        BaseModel model = new BaseModel();
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void countconTody(Map<String, Object> params, HttpCallback<CountcontodayModel> callback) {
+        //  模拟数据
+        CountcontodayModel model = new CountcontodayModel();
+
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void reportsAnalyses(Map<String, Object> params, HttpCallback<DataReportModel> callback) {
+        //  模拟数据
+        DataReportModel model = new DataReportModel();
+        List<DataReportInfo> infos = new ArrayList<>();
+        DataReportInfo info = new DataReportInfo();
+
+        info.setConmany("工作");  //  工作
+        info.setContime("10");
+        info.setContype("10");
+        info.setFoodh("10");
+
+        infos.add(info);
+
+
+        model.setGetdata(infos);
+
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void sceenList(Map<String, Object> params, HttpCallback<ScreenModel> callback) {
+        //  模拟数据
+
+
+
+    }
+
+    @Override
+    public void crowdList(Map<String, Object> params, HttpCallback<IllnessModel> callback) {
+        //  模拟数据
+        IllnessModel model = new IllnessModel();
+        List<IllnessInfo> list = new ArrayList<>();
+        IllnessInfo info = new IllnessInfo();
+
+        for (int i = 0; i < 11; i++) {
+            info.setItem("测试");
+            list.add(info);
+        }
+
+        model.setList(list);
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void illnessList(Map<String, Object> params, HttpCallback<IllnessModel> callback) {
+        //  模拟数据
+        IllnessModel model = new IllnessModel();
+        List<IllnessInfo> list = new ArrayList<>();
+        IllnessInfo info = new IllnessInfo();
+
+        for (int i = 0; i < 11; i++) {
+            info.setItem("测试");
+            list.add(info);
+        }
+
+        model.setList(list);
+        callback.onSuccess(model);
+    }
+
+    @Override
+    public void addWorkConsume(Map<String, Object> params, HttpCallback<WorkModel> callback) {
+        WorkModel model = new WorkModel();
+        List<WorkInfo> infos = new ArrayList<>();
+        WorkInfo info = new WorkInfo();
+
+        for (int i = 0; i < 3; i++) {
+
+            info.setTypenamee("介绍");
+            infos.add(info);
+        }
+
+        model.setGetdata(infos);
+
+
+        callback.onSuccess(model);
+    }*/
 }

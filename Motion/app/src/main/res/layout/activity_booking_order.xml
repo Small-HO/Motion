@@ -36,5 +36,4 @@
 
     <include layout="@layout/ui_home_booking"/>
 
-
 </RelativeLayout>

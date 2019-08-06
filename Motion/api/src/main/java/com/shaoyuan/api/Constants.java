@@ -27,4 +27,11 @@ public class Constants {
     public static double WEIDU;
 
     public static String PERTYPE;
+
+
+    /** 支付参数 */
+    public static String recordid = "";     //  订单支付标记ID
+    public static String subject = "";      //  支付主题
+    public static String price = "";        //  价格
+
 }
