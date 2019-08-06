@@ -158,14 +158,26 @@ public class SiteActivity extends BaseActivity implements SiteInterface.view {
         adapter = new SiteAdapter(this,siteBean.getData());
         recUserVenue.setLayoutManager(new LinearLayoutManager(this));
         recUserVenue.setAdapter(adapter);
-        adapter.setOnItemClickListener(new SiteAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position) {
-                Intent intent = new Intent(SiteActivity.this,SiteDetailActivity.class);
-                intent.putExtra("machid",siteBean.getData().get(position).getMachid());
-                startActivity(intent);
-            }
-        });
+        if(pertype.equals("0")){
+            adapter.setOnItemClickListener(new SiteAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    Intent intent = new Intent(SiteActivity.this,CoachDetailActivity.class);
+                    intent.putExtra("machid",siteBean.getData().get(position).getMachid());
+                    startActivity(intent);
+                }
+            });
+        }else if(pertype.equals("1")){
+            adapter.setOnItemClickListener(new SiteAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    Intent intent = new Intent(SiteActivity.this,SiteDetailActivity.class);
+                    intent.putExtra("machid",siteBean.getData().get(position).getMachid());
+                    startActivity(intent);
+                }
+            });
+        }
+
     }
 
     @Override
